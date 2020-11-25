@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search() {
+function Search () {
   return (
     <div>
       <h1>Search</h1>

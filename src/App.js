@@ -2,9 +2,9 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Home from './components/Home'
-import Search from './components/Search'
-import Random from './components/Random'
+import Home from './Pages/Home'
+import Search from './Pages/Search'
+import Random from './Pages/Random'
 import Navigation from './components/Navigation'
 import './Navigation.css'
 
