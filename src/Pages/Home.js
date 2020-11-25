@@ -2,8 +2,8 @@ import React from 'react'
 
 function Home () {
   return (
-    <div>
-      <h1>Twitter Showcase App!</h1>
+    <div className='container' id='home-container'>
+      {/* <h1>Twitter Showcase App!</h1> */}
     </div>
   )
 }
