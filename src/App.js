@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './Pages/Home'
+import './Home.css'
 import Search from './Pages/Search'
 import Random from './Pages/Random'
 import Navigation from './components/Navigation'
@@ -11,7 +12,7 @@ import './Navigation.css'
 function App () {
   return (
     <Router>
-      <div className='app'>
+      <div className='App'>
         <Navigation />
         <Switch>
           <Route path='/' exact component={Home} />

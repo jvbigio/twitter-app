@@ -2,8 +2,12 @@ import React from 'react'
 
 function Home () {
   return (
-    <div>
-      <h1>Twitter Showcase App!</h1>
+    <div id='home-card'>
+      <div className='heading'>
+        <nav>
+          <h1>Twitter Showcase App!</h1>
+        </nav>
+      </div>
     </div>
   )
 }
