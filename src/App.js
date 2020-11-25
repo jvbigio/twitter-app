@@ -11,13 +11,15 @@ import './Navigation.css'
 function App () {
   return (
     <Router>
-      <div className='app'>
+      <div className='App'>
         <Navigation />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/search' component={Search} />
-          <Route path='/random' component={Random} />
-        </Switch>
+        <main className='card'>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/search' component={Search} />
+            <Route path='/random' component={Random} />
+          </Switch>
+        </main>
       </div>
     </Router>
   )
