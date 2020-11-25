@@ -31,7 +31,12 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 100vh;
+  /* height: 100vh; */
+  /* new */
+  height: 80vh; 
+  margin-top: 20vh;
+
+  /* end new */
   width: 15vw;
   border-right: 1px solid #D7DBDD;
   background: #34495e
@@ -46,9 +51,9 @@
   text-decoration: none;
 }
 
-.section {
-  /* padding: 10px; */
-}
+/* .section {
+  padding: 10px;
+} */
 
 .active {
   background-color: #00688B;

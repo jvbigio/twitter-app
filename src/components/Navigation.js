@@ -16,8 +16,8 @@ function Navigation () {
         </div>
       </div>
       <div className='section'>
-        <div className='item'>Settings</div>
-        <div className='item'>Questions?</div>
+        <div className='item'>By:</div>
+        <div className='item'>Joe Bigio</div>
       </div>
     </div>
   )

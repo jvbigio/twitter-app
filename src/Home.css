@@ -1,4 +1,4 @@
-#home-card {
+/* #home-card {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -13,5 +13,23 @@ h1 {
 .heading {
   align-items: center;
   justify-content: center;
-  /* margin-left: 400px; */
+} */
+
+/* #top-container {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-bottom: 75vh; 
+  margin-left: 150px;
+
+} */
+
+.hero-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 75vh;
+  width: 500px;
 }
