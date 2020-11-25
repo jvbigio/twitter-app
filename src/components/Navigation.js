@@ -3,22 +3,28 @@ import { NavLink } from 'react-router-dom'
 
 function Navigation () {
   return (
-    <div className='sidebar'>
-      <div className='section'>
-        <div className='item'>
-          <NavLink exact to='/' activeClassName='active'>Home</NavLink>
+    <div className='nav-card'>
+      <header className='hero-header'>
+        <h1>Yapper - A Twitter Showcase App</h1>
+      </header>
+      <div className='sidebar'>
+        <div className='section'>
+          <div className='item'>
+            <NavLink exact to='/' activeClassName='active'>Home</NavLink>
+          </div>
+          <div className='item'>
+            <NavLink to='/search' activeClassName='active'>Search</NavLink>
+          </div>
+          <div className='item'>
+            <NavLink to='/random' activeClassName='active'>Random</NavLink>
+          </div>
         </div>
-        <div className='item'>
-          <NavLink to='/search' activeClassName='active'>Search</NavLink>
-        </div>
-        <div className='item'>
-          <NavLink to='/random' activeClassName='active'>Random</NavLink>
+        <div className='section'>
+          <div className='item'>By:</div>
+          <div className='item'>Joe Bigio</div>
         </div>
       </div>
-      <div className='section'>
-        <div className='item'>By:</div>
-        <div className='item'>Joe Bigio</div>
-      </div>
+
     </div>
   )
 }

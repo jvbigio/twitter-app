@@ -4,12 +4,7 @@ import React from 'react'
 
 function Home () {
   return (
-    <div className='container'>
-      <header className='hero-header'>
-        <h1>Yapper - A Twitter Showcase App</h1>
-      </header>
-
-    </div>
+    <div className='container' />
   )
 }
 
