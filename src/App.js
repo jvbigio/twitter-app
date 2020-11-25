@@ -1,26 +1,25 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './components/Home'
 import Search from './components/Search'
 import Random from './components/Random'
-import Error from './components/Error'
 import Navigation from './components/Navigation'
+import './Navigation.css'
 
-function App() {
+function App () {
   return (
-     <BrowserRouter>
-      <div>
+    <Router>
+      <div className='app'>
         <Navigation />
-          <Switch>
-            <Route path='/' component={Home} exact/>
-            <Route path="/search" component={Search}/>
-            <Route path="/random" component={Random}/>
-          <Route component={Error}/>
-          </Switch>
-      </div> 
-    </BrowserRouter>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/search' component={Search} />
+          <Route path='/random' component={Random} />
+        </Switch>
+      </div>
+    </Router>
   )
 }
 
