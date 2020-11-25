@@ -14,13 +14,13 @@ function App () {
     <Router>
       <div className='App'>
         <Navigation />
-        {/* <main className='card'> */}
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/search' component={Search} />
-          <Route path='/random' component={Random} />
-        </Switch>
-        {/* </main> */}
+        <main className='card'>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/search' component={Search} />
+            <Route path='/random' component={Random} />
+          </Switch>
+        </main>
       </div>
     </Router>
   )
