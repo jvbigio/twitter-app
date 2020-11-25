@@ -6,4 +6,4 @@ function Search () {
   )
 }
 
-export defhault Search
+export default Search
