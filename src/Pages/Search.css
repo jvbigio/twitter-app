@@ -36,7 +36,7 @@
 }
 .content-card {
   /* text-align: center; */
-  border: 3px dotted black;
+  /* border: 3px dotted black; */
   margin-top: 20px;
   display: flex;
   justify-content: center;
