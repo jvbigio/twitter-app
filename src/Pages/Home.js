@@ -9,9 +9,10 @@ import CardColumns from 'react-bootstrap/CardColumns'
 function Home () {
   return (
     <div className='home'>
-      <div className='home-card'>
-        <img src='https://fontmeme.com/permalink/201126/da572f1fd8af8c72e9c3e39ff9d4ea1f.png' alt='' />
-        <p> An app that allows users to read or search tweets, and also generate random ones from your favorite users.</p>
+      <div className='home-card module'>
+        <header>
+          <h1> An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h1>
+        </header>
       </div>
     </div>
   // <Card style={{ width: '50vw', height: '50vh' }}>
