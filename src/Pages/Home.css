@@ -17,7 +17,7 @@
   -webkit-box-shadow: -2px -1px 15px 7px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: -3px -2px 30px 14px rgba(0, 0, 0, 0.425);
   box-shadow: 5px 5px 20px;
-  hopacity: 0.7;
+  opacity: 0.7;
 }
 
 h1 {

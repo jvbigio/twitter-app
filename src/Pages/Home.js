@@ -10,20 +10,9 @@ function Home () {
   return (
     <div className='home'>
       <div className='home-card module'>
-        <header>
-          <h1> An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h1>
-        </header>
+        <h1> An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h1>
       </div>
     </div>
-  // <Card style={{ width: '50vw', height: '50vh' }}>
-  //   <Card.Img variant='top' src={chatBg} />
-  //   <Card.Body>
-  //     <Card.Title>Yapper</Card.Title>
-  //     <Card.Text>
-  //       An app that allows users to read or search tweets, and also generate random ones from your favorite users.
-  //     </Card.Text>
-  //   </Card.Body>
-  // </Card>
   )
 }
 
