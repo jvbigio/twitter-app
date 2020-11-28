@@ -6,7 +6,6 @@ import TweetCard from '../components/TweetCard'
 function Search () {
   return (
     <div className='container'>
-      {/* test */}
       <div className='form-container'>
         <Form inline className='search-box' autoComplete='off'>
           <Form.Group controlId='search'>

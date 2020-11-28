@@ -10,10 +10,16 @@ const TweetCard = () => {
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         {/* <Card.Img src={avatar} className='rounded-circle mr-3' height='50px' width='50px' /> */}
         <div>
-          <Card.Title className='font-weight-bold mb-2'>Beej</Card.Title><span>@beej</span>
+          <Card.Title className='font-weight-bold mb-2'>Jdoe <span className='font-weight-light'> @beej</span></Card.Title>
           <Card.Body>
             <div className='collapse-content'>
-              <Card.Text>Tweet Content here...</Card.Text>
+              <br />
+              <div>
+                <Card.Text>
+                  Tweet Content here...
+                </Card.Text>
+
+              </div>
             </div>
           </Card.Body>
         </div>
