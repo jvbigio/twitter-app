@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
+import TweetCard from '../components/TweetCard'
 
 function Search () {
   return (
@@ -15,7 +16,7 @@ function Search () {
         </Form>
       </div>
       <div className='content-card'>
-        <h3>Tweet content here</h3>
+        <TweetCard />
       </div>
     </div>
   )

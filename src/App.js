@@ -9,6 +9,8 @@ import './Pages/Search.css'
 import Random from './Pages/Random'
 import Navigation from './components/Navigation'
 import './Navigation.css'
+// import TweetCard from './components/TweetCard'
+import './TweetCard.css'
 
 function App () {
   return (
