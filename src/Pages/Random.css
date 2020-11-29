@@ -4,16 +4,19 @@
   align-items: center;
 } */
 
-.card {
+#card-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.random-card {
   justify-content: center;
   align-items: center;
 }
 
-.card-deck {
-  margin-top: 20px;
-}
 
-img {
+.avatar {
   margin-top: 20px;
 }
