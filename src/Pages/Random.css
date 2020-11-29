@@ -1,0 +1,19 @@
+/* img, .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-deck {
+  margin-top: 20px;
+}
+
+img {
+  margin-top: 20px;
+}
