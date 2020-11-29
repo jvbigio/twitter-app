@@ -5,10 +5,8 @@ import avatar from '../images/popeye.jpg'
 const TweetCard = () => {
   return (
     <Card className='card' id='tweet-card'>
-      {/* <Card.Img variant='bottom' src='holder.js/100px180' /> */}
       <Card.Body className='d-flex flex-row'>
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
-        {/* <Card.Img src={avatar} className='rounded-circle mr-3' height='50px' width='50px' /> */}
         <div>
           <Card.Title className='font-weight-bold mb-2'>Jdoe <span className='font-weight-light'> @beej</span></Card.Title>
           <Card.Body>
