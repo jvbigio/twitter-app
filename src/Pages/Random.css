@@ -1,14 +1,10 @@
-/* img, .avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 #card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .random-card {
@@ -19,4 +15,9 @@
 
 .avatar {
   margin-top: 20px;
+}
+
+.card-footer {
+  text-align: center;
+  width: 100%;
 }

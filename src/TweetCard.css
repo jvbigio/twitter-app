@@ -3,6 +3,10 @@
   display: flex;
   background-color: transparent;
   height: 30%;
-  width: 50%;
+  /* width: 50%; */
+  width: 40%;
 }
 
+p.card-text {
+  text-align: center;
+}
