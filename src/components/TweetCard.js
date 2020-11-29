@@ -16,7 +16,6 @@ const TweetCard = () => {
                 <Card.Text>
                   Tweet Content here...
                 </Card.Text>
-
               </div>
             </div>
           </Card.Body>

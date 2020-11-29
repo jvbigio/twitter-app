@@ -1,13 +1,16 @@
-/* .card {
+#card-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.random-card {
   justify-content: center;
   align-items: center;
 }
 
-.card-deck {
+
+.avatar {
   margin-top: 20px;
 }
-
-img {
-  margin-top: 20px;
-} */
