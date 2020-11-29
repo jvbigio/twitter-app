@@ -14,3 +14,8 @@
 .avatar {
   margin-top: 20px;
 }
+
+.card-footer {
+  width: 100%;
+  text-align: center;
+}
