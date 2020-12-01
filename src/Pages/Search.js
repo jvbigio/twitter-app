@@ -17,6 +17,8 @@ function Search () {
     e.preventDefault()
     console.log(`Typed: ${input}`)
     // do something
+    setInput('')
+    e.target.reset()
   }
 
   return (
