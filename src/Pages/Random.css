@@ -1,0 +1,23 @@
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.random-card {
+  justify-content: center;
+  align-items: center;
+}
+
+
+.avatar {
+  margin-top: 20px;
+}
+
+.card-footer {
+  text-align: center;
+  width: 100%;
+}

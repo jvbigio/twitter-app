@@ -30,26 +30,4 @@ const TweetCard = () => {
   )
 }
 
-/*
-Bootstap
- <div className='card' id='tweet-card'>
-      <div className='card-body d-flex flex-row'>
-        <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
-        <div>
-          <h4 className='card-title font-weight-bold mb-2'>Beej</h4><span>@beej</span>
-
-          <div className='card-body'>
-            <div className='collapse-content'>
-              <p className='card-text collapse' id='collapse-content'>Tweet content here...</p>
-              <a class='btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed' data-toggle='collapse' href='#collapseContent' aria-expanded='false' aria-controls='collapseContent' />
-              <i className='fas fa-share-alt text-muted float-right p-1 my-1' data-toggle='tooltip' data-placement='top' title='Share this post' />
-              <i className='fas fa-heart text-muted float-right p-1 my-1 mr-3' data-toggle='tooltip' data-placement='top' title='I like it' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-*/
-
 export default TweetCard
