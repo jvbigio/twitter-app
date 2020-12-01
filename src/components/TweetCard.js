@@ -8,7 +8,7 @@ const TweetCard = () => {
       <Card.Body className='d-flex flex-row'>
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         <div>
-          <Card.Title className='font-weight-bold mb-2'>Jdoe <span className='font-weight-light'> @beej</span></Card.Title>
+          <Card.Title className='username font-weight-bold mb-2'>Jdoe <span className='font-weight-light'> @beej</span></Card.Title>
           <Card.Body>
             <div className='collapse-content'>
               <br />
