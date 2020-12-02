@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
 
 const TweetCard = (props) => {
-  // debugger
   // work on hiding tweet card unless the search input matches username/user:
   // if (props.input !== 'jdoe') {
   //   return <div />
