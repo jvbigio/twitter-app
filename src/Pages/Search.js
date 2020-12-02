@@ -36,7 +36,7 @@ function Search () {
         </Form>
       </div>
       <div className='content-card'>
-        <TweetCard />
+        <TweetCard input={input} />
       </div>
     </div>
   )
