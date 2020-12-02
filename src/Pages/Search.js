@@ -9,14 +9,16 @@ function Search () {
   const [input, setInput] = useState('')
 
   const getUserInput = e => {
-    // console.log(e.target.value)
     setInput(e.target.value)
   }
 
   const executeSearch = (e) => {
     e.preventDefault()
-    console.log(`Typed: ${input}`)
     // do something
+    console.log(input)
+    // if (input !== 'jdoe') {
+    //   return <div />
+    // }
     setInput('')
     e.target.reset()
   }
@@ -29,6 +31,7 @@ function Search () {
             <Form.Control
               type='text'
               placeholder='Search Twitter'
+              value={input}
               onChange={(e) => getUserInput(e)}
             />
           </Form.Group>
