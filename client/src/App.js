@@ -1,15 +1,10 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import Home from './Pages/Home'
-import './Pages/Home.css'
 import Search from './Pages/Search'
-import './Pages/Search.css'
 import Random from './Pages/Random'
 import Navigation from './components/Navigation'
-import './Navigation.css'
-import './TweetCard.css'
 
 function App () {
   return (

@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
 import TweetCard from '../components/TweetCard'
 // import '../TweetCard.css'
+import './Search.css'
+
 import axios from 'axios'
 
 function Search () {
