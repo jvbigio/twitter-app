@@ -10,47 +10,6 @@ app.use('/', express.static(path.join(__dirname, 'client/build')))
 
 app.listen(3000)
 
-// original version:
-// const url = 'https://api.twitter.com/oauth2/token'
-
-// axios.post(url, qs.stringify({ grant_type: 'client_credentials' }), {
-//   headers: {
-//     'Content-Type': 'application/x-www-form-urlencoded'
-//   },
-//   body: 'grant_type=client_credentials',
-//   auth: {
-//     username: process.env.API_KEY,
-//     password: process.env.API_SECRET_KEY
-//   }
-// }).then(response => {
-//   console.log(response)
-// }).catch(error => {
-//   console.error(error)
-// })
-
-// works
-// const getAccessToken = async () => {
-//   const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
-//     headers: {
-//       'Content-Type': 'application/x-www-form-urlencoded'
-//     },
-//     body: 'grant_type=client_credentials',
-//     auth: {
-//       username: process.env.API_KEY,
-//       password: process.env.API_SECRET_KEY
-//     }
-//   }).then(response => {
-//     const token = response.data.access_token
-//     // console.log(response.data.access_token) // returns bearer token
-//     // token = res.data
-//     console.log(token)
-//   }).catch(error => {
-//     console.error(error)
-//   })
-// }
-// getAccessToken()
-
-// using try/catch
 const getAccessToken = async () => {
   try {
     const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
@@ -71,48 +30,3 @@ const getAccessToken = async () => {
   }
 }
 getAccessToken()
-
-// keep:
-// const getBearerToken = async () => {
-//   const data = {
-//     grant_type: 'client_credentials'
-//   }
-//   const headers = {
-//     'Content-Type': 'application/x-www-form-urlencoded'
-//   }
-//   const url = 'https://api.twitter.com/oauth2/token'
-//   try {
-//     const token = axios.post(url, data)
-//     const tokenParsed = await token
-//     return `${tokenParsed.data.token_type} ${tokenParsed.data.access_token}`
-//   } catch (error) {
-//     console.error(error)
-//     console.log('Token request failed!')
-//     return false
-//   }
-// }
-// getBearerToken()
-
-// const url = 'https://api.twitter.com/oauth2/token'
-// // different approach
-// const getBearerToken = async () => {
-//   const tokenParsed,
-//   try {
-//     const token = axios.post(url, qs.stringify({ grant_type: 'client_credentials' }), {
-//       headers: {
-//         'Content-Type':'application/x-www-form-urlencoded'
-//       },
-//       body: 'grant_type=client_credentials',
-//       auth: {
-//         username: process.env.API_KEY,
-//         password: process.env.API_SECRET_KEY
-//       }
-//       tokenParsed = await token
-//       return `${tokenParsed.data.token_type} ${tokenParsed.data.access_token}`
-//     } catch (error) {
-//     console.error(error)
-//     console.log('Token request failed!')
-//     return false
-//   }
-// }
-// getBearerToken()
