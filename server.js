@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const axios = require('axios')
-const queryString = require('query-string')
+const qs = require('qs')
 
 require('dotenv').config()
 
@@ -13,11 +13,10 @@ app.listen(3000)
 
 const url = 'https://api.twitter.com/oauth2/token'
 
-
 axios.post(url, {
-  queryString.stringify({'grant_type':'client_credentials'}),{
+  qs.stringify({'grant_type':'client_credentials'}),{
   headers: {
-    'Content-Type':'application/x-www-form-urlencoded'
+    'Content-Type': 'application/x-www-form-urlencoded'
   },
   auth: {
     username: process.env.API_KEY,
@@ -26,5 +25,5 @@ axios.post(url, {
 }).then(response => {
   console.log(response)
 }).catch(error => {
-  console.error(error.response.data.error)
+  console.error(error)
 })
