@@ -29,25 +29,48 @@ app.listen(3000)
 // })
 
 // works
+// const getAccessToken = async () => {
+//   const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
+//     headers: {
+//       'Content-Type': 'application/x-www-form-urlencoded'
+//     },
+//     body: 'grant_type=client_credentials',
+//     auth: {
+//       username: process.env.API_KEY,
+//       password: process.env.API_SECRET_KEY
+//     }
+//   }).then(response => {
+//     const token = response.data.access_token
+//     // console.log(response.data.access_token) // returns bearer token
+//     // token = res.data
+//     console.log(token)
+//   }).catch(error => {
+//     console.error(error)
+//   })
+// }
+// getAccessToken()
+
+// using try/catch
 const getAccessToken = async () => {
-  const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: 'grant_type=client_credentials',
-    auth: {
-      username: process.env.API_KEY,
-      password: process.env.API_SECRET_KEY
-    }
-  }).then(response => {
-    console.log(response)
-    console.log(res)
-  }).catch(error => {
+  try {
+    const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: 'grant_type=client_credentials',
+      auth: {
+        username: process.env.API_KEY,
+        password: process.env.API_SECRET_KEY
+      }
+    })
+    const token = res.data.access_token
+    console.log(token)
+    return token
+  } catch (error) {
     console.error(error)
-  })
+  }
 }
 getAccessToken()
-
 
 // keep:
 // const getBearerToken = async () => {
