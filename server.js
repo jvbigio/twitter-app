@@ -16,7 +16,7 @@ const url = 'https://api.twitter.com/oauth2/token'
 axios.post(url, {
   qs.stringify({'grant_type':'client_credentials'}),{
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type':'application/x-www-form-urlencoded'
   },
   auth: {
     username: process.env.API_KEY,
