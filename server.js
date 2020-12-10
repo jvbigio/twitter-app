@@ -3,13 +3,28 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const axios = require('axios')
+var queryString = require('query-string')
+
 require('dotenv').config()
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
 app.listen(3000)
 
-// test
-// app.get('/api/tweets', (req, res) => res.send('hello')) // works in postman
+const url = 'https://api.twitter.com/oauth2/token'
 
-// const username = process.env.API_KEY // works
+
+axios.post(url, {
+  queryString.stringify({'grant_type':'client_credentials'}),{
+  headers: {
+    'Content-Type':'application/x-www-form-urlencoded'
+  },
+  auth: {
+    username: process.env.API_KEY,
+    password: process.env.API_SECRET_KEY
+  },
+}).then(response => {
+  console.log(response)
+}).catch(error => {
+  console.error(error.response.data.error)
+})
