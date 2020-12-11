@@ -23,6 +23,7 @@ const getAccessToken = async () => {
       }
     })
     const token = await res.data.access_token
+    console.log(token)
     return token
   } catch (error) {
     console.error(error)
