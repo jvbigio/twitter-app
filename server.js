@@ -23,7 +23,6 @@ const getAccessToken = async () => {
       }
     })
     const token = await res.data.access_token
-    console.log(token)
     return token
   } catch (error) {
     console.error(error)
@@ -31,6 +30,11 @@ const getAccessToken = async () => {
 }
 
 getAccessToken()
+// const token = process.env.BEARER_TOKEN // works
+
+// TODO: Implement Twitter Retrieval
+// Create a new function.
+// Send HTTP GET Request to Twitter API endpoint for retrieving tweets.
 
 // From axios docs
 // `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
