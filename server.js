@@ -37,13 +37,13 @@ getAccessToken()
 const getTweets = async () => {
   try {
     // Send HTTP GET Request to Twitter API endpoint for retrieving tweets.
-    const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular', {
+    const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=recent&count=10', {
       headers: {
         'Content-Type': 'application',
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
-    console.log(response.data)
+    console.log(response.data.statuses)
   } catch (error) {
     console.error(error)
   }
