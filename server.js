@@ -23,10 +23,16 @@ const getAccessToken = async () => {
       }
     })
     const token = res.data.access_token
-    console.log(token)
     return token
   } catch (error) {
     console.error(error)
   }
 }
 getAccessToken()
+
+// From axios docs
+// `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
+// This will set an `Authorization` header, overwriting any existing
+// `Authorization` custom headers you have set using `headers`.
+// Please note that only HTTP Basic auth is configurable through this parameter.
+// For Bearer tokens and such, use `Authorization` custom headers instead.
