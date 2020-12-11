@@ -22,12 +22,13 @@ const getAccessToken = async () => {
         password: process.env.API_SECRET_KEY
       }
     })
-    const token = res.data.access_token
+    const token = await res.data.access_token
     return token
   } catch (error) {
     console.error(error)
   }
 }
+
 getAccessToken()
 
 // From axios docs
