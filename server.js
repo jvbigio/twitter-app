@@ -33,7 +33,6 @@ getAccessToken()
 
 const getTweets = async () => {
   try {
-    // Send HTTP GET Request to Twitter API endpoint for retrieving tweets.
     const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=recent&count=5', {
       headers: {
         'Content-Type': 'application',
@@ -62,10 +61,3 @@ const getUsers = async () => {
 }
 
 getUsers()
-
-// From axios docs
-// `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
-// This will set an `Authorization` header, overwriting any existing
-// `Authorization` custom headers you have set using `headers`.
-// Please note that only HTTP Basic auth is configurable through this parameter.
-// For Bearer tokens and such, use `Authorization` custom headers instead.
