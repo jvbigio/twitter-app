@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
-import '../TweetCard.css'
+import './TweetCard.css'
 
 const TweetCard = (props) => {
   // work on hiding tweet card unless the search input matches username/user:

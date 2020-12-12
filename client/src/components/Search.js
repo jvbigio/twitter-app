@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
-import TweetCard from '../components/TweetCard'
+import TweetCard from './TweetCard'
 import './Search.css'
 
 function Search () {
