@@ -55,7 +55,7 @@ const getUsers = async () => {
       }
     })
     // console.log(response.data.statuses) // works
-    // now manipulate the data
+    // now manipulate the data.
   } catch (error) {
     console.error(error)
   }
