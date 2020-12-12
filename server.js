@@ -43,12 +43,28 @@ const getTweets = async () => {
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
-    console.log(response.data.statuses)
+    // console.log(response.data) // works
   } catch (error) {
     console.error(error)
   }
 }
 getTweets()
+
+const getUsers = async () => {
+  try {
+    const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from%3Agaryvee&result_type=recent&count=5', {
+      headers: {
+        'Content-Type': 'application',
+        Authorization: `Bearer ${process.env.BEARER_TOKEN}`
+      }
+    })
+    console.log(response.data.statuses)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+getUsers()
 
 // From axios docs
 // `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
