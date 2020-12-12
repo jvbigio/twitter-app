@@ -54,7 +54,8 @@ const getUsers = async () => {
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
-    console.log(response.data.statuses)
+    // console.log(response.data.statuses) // works
+    // now manipulate the data
   } catch (error) {
     console.error(error)
   }
