@@ -40,6 +40,7 @@ const getTweets = async () => {
       }
     })
     // console.log(response.data) // works
+    // Do something with the data now
   } catch (error) {
     console.error(error)
   }
