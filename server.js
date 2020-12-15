@@ -2,14 +2,15 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const port = process.env.PORT || 3000
 const axios = require('axios')
 const qs = require('qs')
-const { allowedNodeEnvironmentFlags } = require('process')
 require('dotenv').config()
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
-app.listen(3000)
+// app.listen(3000) // original
+app.listen(port, () => console.log(`Server running on port ${port}`))
 
 const getAccessToken = async () => {
   try {
