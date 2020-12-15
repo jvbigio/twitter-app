@@ -4,6 +4,7 @@ const app = express()
 const path = require('path')
 const axios = require('axios')
 const qs = require('qs')
+const { allowedNodeEnvironmentFlags } = require('process')
 require('dotenv').config()
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
@@ -65,3 +66,22 @@ const getUsers = async () => {
 getUsers()
 
 // TODO: Week 4: Create API endpoints on server
+// test
+app.get('/', (req, res) => {
+  res.send('GET request to homepage')
+})
+
+app.get('/search', (req, res) => {
+  res.send('search')
+})
+
+app.get('/random', (req, res) => {
+  res.send('random')
+})
+
+/*
+NOTES:
+Routing refers to how an application’s endpoints (URIs) respond to client requests.
+https://expressjs.com/en/guide/routing.html
+
+*/
