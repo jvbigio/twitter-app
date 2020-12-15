@@ -63,3 +63,5 @@ const getUsers = async () => {
 }
 
 getUsers()
+
+// TODO: Week 4: Create API endpoints on server
