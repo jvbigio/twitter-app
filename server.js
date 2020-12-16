@@ -41,8 +41,9 @@ const getTweets = async () => {
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
+    
     // console.log(response.data) // works
-    // Do something with the data now
+    // app.get logic for searching tweet content goes here?
   } catch (error) {
     console.error(error)
   }
@@ -58,7 +59,7 @@ const getUsers = async () => {
       }
     })
     // console.log(response.data.statuses) // works
-    // now manipulate the data.
+    // app.get logic for searching a user goes here?
   } catch (error) {
     console.error(error)
   }
