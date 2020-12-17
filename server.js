@@ -41,7 +41,7 @@ const getTweets = async () => {
       }
     })
 
-    console.log(response.data) // works
+    // console.log(response.data) // works
     // app.get logic for searching tweet content goes here?
   } catch (error) {
     console.error(error)
@@ -57,7 +57,7 @@ const getUsers = async () => {
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
-    // console.log(response.data.statuses) // works
+    console.log(response.data.statuses) // works
     // app.get logic for searching a user goes here?
   } catch (error) {
     console.error(error)
@@ -72,7 +72,7 @@ const tweetSearch = [
   { id: 2, text: 'Hey hey!' }
 ]
 
-const twitterUser = [
+const twitterUsers = [
   { id: 1, username: 'garyvee' },
   { id: 2, username: 'SteveMaxwellSC' }
 ]
@@ -80,7 +80,15 @@ const twitterUser = [
 // TODO: Week 4: Create API endpoints on server
 // test
 app.get('/api/tweets/user', (req, res) => {
-  res.send(twitterUser)
+  res.send(twitterUsers)
+})
+
+// by username?
+app.get('/api/tweets/user/:username', (req, res) => {
+  const user = twitterUsers.find(handle => handle.username === req.params.username)
+
+  if (!user) res.status(404).send('Username given does not exist!')
+  res.send(twitterUsers)
 })
 
 app.get('/api/tweets/search', (req, res) => {
