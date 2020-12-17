@@ -3,9 +3,11 @@ import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
 import TweetCard from './TweetCard'
 import './Search.css'
+import axios from 'axios'
 
 function Search () {
   const [input, setInput] = useState('')
+  const [tweetContent, setTweetContent] = useState([])
 
   const getUserInput = e => {
     setInput(e.target.value)
@@ -17,6 +19,14 @@ function Search () {
     setInput('')
     e.target.reset()
   }
+
+  const getTweetContent = async () => {
+    const response = await axios.get('/api/tweets/search')
+
+    setTweetContent(response.data)
+  }
+
+  // getTweetContent()
 
   return (
     <div className='container'>

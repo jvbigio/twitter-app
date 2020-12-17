@@ -9,7 +9,6 @@ require('dotenv').config()
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
-// app.listen(3000) // original
 app.listen(port, () => console.log(`Server running on port ${port}`))
 
 const getAccessToken = async () => {
@@ -66,18 +65,24 @@ const getUsers = async () => {
 
 getUsers()
 
+// dummy data to test API
+const tweetSearch = [
+  { id: 1, text: 'Try to exercise at least 30 min a day!' },
+  { id: 2, text: 'Hey hey!' }
+]
+
 // TODO: Week 4: Create API endpoints on server
 // test
-app.get('/', (req, res) => {
-  res.send('GET request to homepage')
+app.get('/api/tweets/user', (req, res) => {
+  res.send('Search Twitter username')
 })
 
-app.get('/search', (req, res) => {
-  res.send('search')
+app.get('/api/tweets/search', (req, res) => {
+  res.send(tweetSearch)
 })
 
-app.get('/random', (req, res) => {
-  res.send('random')
+app.get('/api/tweets/random', (req, res) => {
+  res.send('random tweet')
 })
 
 /*
