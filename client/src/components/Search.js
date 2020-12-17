@@ -33,7 +33,6 @@ function Search () {
     setUser(response.data)
   }
 
-
   return (
     <div className='container'>
       <div className='form-container'>
