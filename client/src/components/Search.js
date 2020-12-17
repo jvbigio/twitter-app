@@ -7,7 +7,8 @@ import axios from 'axios'
 
 function Search () {
   const [input, setInput] = useState('')
-  const [tweetContent, setTweetContent] = useState([])
+  const [searchTwitterContent, setSearchTwitterContent] = useState([])
+  const [user, setUser] = useState([])
 
   const getUserInput = e => {
     setInput(e.target.value)
@@ -23,10 +24,15 @@ function Search () {
   const getTweetContent = async () => {
     const response = await axios.get('/api/tweets/search')
 
-    setTweetContent(response.data)
+    setSearchTwitterContent(response.data)
   }
 
-  // getTweetContent()
+  const getUser = async () => {
+    const response = await axios.get('/api/tweets/user')
+
+    setUser(response.data)
+  }
+
 
   return (
     <div className='container'>

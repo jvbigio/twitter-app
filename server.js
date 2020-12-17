@@ -40,7 +40,7 @@ const getTweets = async () => {
         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
       }
     })
-    
+
     // console.log(response.data) // works
     // app.get logic for searching tweet content goes here?
   } catch (error) {
@@ -72,13 +72,17 @@ const tweetSearch = [
   { id: 2, text: 'Hey hey!' }
 ]
 
+const twitterUser = [
+  { id: 1, username: 'garyvee' },
+  { id: 2, username: 'SteveMaxwellSC' }
+]
+
 // TODO: Week 4: Create API endpoints on server
 // test
 app.get('/api/tweets/user', (req, res) => {
-  res.send('Search Twitter username')
+  res.send(twitterUser)
 })
 
-// works!
 app.get('/api/tweets/search', (req, res) => {
   res.send(tweetSearch)
 })
