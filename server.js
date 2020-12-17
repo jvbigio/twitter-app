@@ -78,6 +78,7 @@ app.get('/api/tweets/user', (req, res) => {
   res.send('Search Twitter username')
 })
 
+// works!
 app.get('/api/tweets/search', (req, res) => {
   res.send(tweetSearch)
 })
