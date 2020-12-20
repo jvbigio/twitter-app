@@ -26,14 +26,14 @@ const getAccessToken = async () => {
       }
     })
     const token = res.data.access_token
-    // console.log(token)
     return token
   } catch (error) {
     console.error(error)
   }
 }
 
-getAccessToken()
+getAccessToken() // should i call this now or add it to below .get() requests?
+// const token = await getAccessToken() // like so
 
 const getTweets = async () => {
   try {
