@@ -42,7 +42,7 @@ const getTweets = async () => {
       }
     })
 
-    console.log(response.data) // works
+    // console.log(response.data) // works
     // app.get logic for searching tweet content goes here?
   } catch (error) {
     console.error(error)

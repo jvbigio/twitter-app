@@ -9,6 +9,7 @@ function Search () {
   const [input, setInput] = useState('')
   const [searchTwitterContent, setSearchTwitterContent] = useState([])
   const [user, setUser] = useState([])
+  // const [loading, setLoading] = useState(false) // add spinner if time permitting
 
   const getUserInput = e => {
     setInput(e.target.value)
@@ -29,7 +30,6 @@ function Search () {
 
   const getUser = async () => {
     const response = await axios.get('/api/tweets/user')
-
     setUser(response.data)
   }
 
