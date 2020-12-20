@@ -24,6 +24,7 @@ const getAccessToken = async () => {
       }
     })
     const token = res.data.access_token
+    // console.log(token)
     return token
   } catch (error) {
     console.error(error)
@@ -41,7 +42,7 @@ const getTweets = async () => {
       }
     })
 
-    // console.log(response.data) // works
+    console.log(response.data) // works
     // app.get logic for searching tweet content goes here?
   } catch (error) {
     console.error(error)
