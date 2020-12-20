@@ -66,7 +66,7 @@ const getUsers = async () => {
 
 getUsers()
 
-// dummy data to test API
+// dummy data to test API:
 const tweetSearch = [
   { id: 1, text: 'Try to exercise at least 30 min a day!' },
   { id: 2, text: 'Hey hey!' }
