@@ -68,10 +68,10 @@ const getUsers = async () => {
 getUsers()
 
 // dummy data to test API:
-const tweetSearch = [
-  { id: 1, text: 'Try to exercise at least 30 min a day!' },
-  { id: 2, text: 'Hey hey!' }
-]
+// const tweetSearch = [
+//   { id: 1, text: 'Try to exercise at least 30 min a day!' },
+//   { id: 2, text: 'Hey hey!' }
+// ]
 
 const twitterUsers = [
   { id: 1, username: 'garyvee' },
@@ -79,7 +79,11 @@ const twitterUsers = [
 ]
 
 // TODO: Week 4: Create API endpoints on server
-// test
+
+// search by Twitter content
+app.get('/api/tweets/search', (req, res) => {
+  // res.send(tweetSearch) // works
+})
 app.get('/api/tweets/user', (req, res) => {
   res.send(twitterUsers)
 })
@@ -90,10 +94,6 @@ app.get('/api/tweets/user/:username', (req, res) => {
 
   if (!user) res.status(404).send('Username given does not exist!')
   res.send(twitterUsers)
-})
-
-app.get('/api/tweets/search', (req, res) => {
-  res.send(tweetSearch)
 })
 
 app.get('/api/tweets/random', (req, res) => {
