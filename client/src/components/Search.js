@@ -7,7 +7,7 @@ import axios from 'axios'
 
 function Search () {
   const [input, setInput] = useState('')
-  const [searchTwitterContent, setSearchTwitterContent] = useState([])
+  // const [searchTwitterContent, setSearchTwitterContent] = useState([])
   const [user, setUser] = useState([])
   // const [loading, setLoading] = useState(false) // add spinner if time permitting
 
@@ -15,10 +15,16 @@ function Search () {
     setInput(e.target.value)
   }
 
-  const executeSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault()
     console.log(input)
-    setInput('')
+    // setInput('')
+    // try {
+    //   const response = await axios.get('/api/tweets/search')
+    //   console.log(response.data)
+    // } catch (err) {
+    //   console.error(err)
+    // }
     e.target.reset()
   }
 
@@ -36,7 +42,7 @@ function Search () {
   return (
     <div className='container'>
       <div className='form-container'>
-        <Form onSubmit={executeSearch} inline className='search-box' autoComplete='off'>
+        <Form onSubmit={handleSearch} inline className='search-box' autoComplete='off'>
           <Form.Group controlId='search'>
             <Form.Control
               type='text'

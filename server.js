@@ -85,6 +85,7 @@ const twitterUsers = [
 // search by Twitter content
 app.get('/api/tweets/search', (req, res) => {
   // res.send(tweetSearch) // works
+  res.send(response.data)
 })
 app.get('/api/tweets/user', (req, res) => {
   res.send(twitterUsers)
