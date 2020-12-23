@@ -75,15 +75,16 @@ getUsers()
 // search by Twitter content
 app.get('/api/tweets/search', async (req, res) => {
   const token = await getAccessToken()
-  const URL = 'https://api.twitter.com/1.1/search/tweets.json'
+  // const URL = 'https://api.twitter.com/1.1/search/tweets.json'
+  const URL = `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.search_term}`
   const config = {
     headers: {
       // 'Content-Type': 'application',
       Authorization: `Bearer ${token}`
     },
     params: {
-      q: req.query.search_term,
-      src: 'typed_query',
+      // q: req.query.search_term,
+      // src: 'typed_query',
       lang: 'en',
       count: 5,
       result_type: 'recent'
