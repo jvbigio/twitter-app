@@ -4,6 +4,7 @@ const app = express()
 const path = require('path')
 const axios = require('axios')
 const qs = require('qs')
+const { response } = require('express')
 require('dotenv').config()
 
 const port = process.env.PORT || 3000
@@ -69,24 +70,31 @@ const getUsers = async () => {
 
 getUsers()
 
-// dummy data to test API:
-// const tweetSearch = [
-//   { id: 1, text: 'Try to exercise at least 30 min a day!' },
-//   { id: 2, text: 'Hey hey!' }
-// ]
-
-const twitterUsers = [
-  { id: 1, username: 'garyvee' },
-  { id: 2, username: 'SteveMaxwellSC' }
-]
-
 // TODO: Week 4: Create API endpoints on server
 
 // search by Twitter content
-app.get('/api/tweets/search', (req, res) => {
-  // res.send(tweetSearch) // works
-  res.send(response.data)
+app.get('/api/tweets/search', async (req, res) => {
+  const token = await getAccessToken()
+  const URL = 'https://api.twitter.com/1.1/search/tweets.json'
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      q: req.query.search_term,
+      count: 5,
+      result_type: 'recent'
+    }
+  }
+  // to twitter to get the data
+  axios.get(URL, config)
+    .then(response => res.send(response.data))
+    .catch(error => {
+      console.error(error)
+      res.sendStatus(500).send(error)
+    })
 })
+
 app.get('/api/tweets/user', (req, res) => {
   res.send(twitterUsers)
 })
