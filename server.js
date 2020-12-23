@@ -4,7 +4,7 @@ const app = express()
 const path = require('path')
 const axios = require('axios')
 const qs = require('qs')
-const { response } = require('express')
+// const { response } = require('express')
 require('dotenv').config()
 
 const port = process.env.PORT || 3000
@@ -33,7 +33,7 @@ const getAccessToken = async () => {
   }
 }
 
-// getAccessToken() 
+// getAccessToken()
 // const token = await getAccessToken() // like so
 
 // const getTweets = async () => {
@@ -83,10 +83,15 @@ app.get('/api/tweets/search', async (req, res) => {
     },
     params: {
       q: req.query.search_term,
+      src: 'typed_query',
+      lang: 'en',
       count: 5,
       result_type: 'recent'
     }
   }
+
+  // added src above for testing
+
   // to twitter to get the data
   axios.get(URL, config)
     .then(response => res.send(response.data))
@@ -96,8 +101,25 @@ app.get('/api/tweets/search', async (req, res) => {
     })
 })
 
-app.get('/api/tweets/user', (req, res) => {
-  res.send(twitterUsers)
+app.get('/api/tweets/user', async (req, res) => {
+  const token = await getAccessToken()
+  const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      screen_name: req.query.username,
+      count: 5
+    }
+  }
+  // GET request to Twitter:
+  axios.get(URL, config)
+    .then(response => res.send(response.data))
+    .catch(error => {
+      console.error(error)
+      res.sendStatus(500).send(error)
+    })
 })
 
 // by username?
