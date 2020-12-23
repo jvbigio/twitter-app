@@ -33,25 +33,25 @@ const getAccessToken = async () => {
   }
 }
 
-getAccessToken() // should i call this now or add it to below .get() requests?
+// getAccessToken() 
 // const token = await getAccessToken() // like so
 
-const getTweets = async () => {
-  try {
-    const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=recent&count=5', {
-      headers: {
-        'Content-Type': 'application',
-        Authorization: `Bearer ${process.env.BEARER_TOKEN}`
-      }
-    })
+// const getTweets = async () => {
+//   try {
+//     const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=recent&count=5', {
+//       headers: {
+//         'Content-Type': 'application',
+//         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
+//       }
+//     })
 
-    // console.log(response.data) // works
-    // app.get logic for searching tweet content goes here?
-  } catch (error) {
-    console.error(error)
-  }
-}
-getTweets()
+//     // console.log(response.data) // works
+//     // app.get logic for searching tweet content goes here?
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
+// getTweets()
 
 const getUsers = async () => {
   try {
@@ -78,6 +78,7 @@ app.get('/api/tweets/search', async (req, res) => {
   const URL = 'https://api.twitter.com/1.1/search/tweets.json'
   const config = {
     headers: {
+      // 'Content-Type': 'application',
       Authorization: `Bearer ${token}`
     },
     params: {

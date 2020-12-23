@@ -10,7 +10,6 @@ function Search () {
   const [tweet, setTweet] = useState([])
   // const [searchTwitterContent, setSearchTwitterContent] = useState([])
   const [user, setUser] = useState([])
-  // const [loading, setLoading] = useState(false) // add spinner if time permitting
 
   const getUserInput = e => {
     setInput(e.target.value)
