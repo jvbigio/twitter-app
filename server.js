@@ -62,7 +62,6 @@ const getUsers = async () => {
       }
     })
     // console.log(response.data.statuses) // works
-    // app.get logic for searching a user goes here?
   } catch (error) {
     console.error(error)
   }
@@ -70,9 +69,6 @@ const getUsers = async () => {
 
 getUsers()
 
-// TODO: Week 4: Create API endpoints on server
-
-// search by Twitter content
 app.get('/api/tweets/search', async (req, res) => {
   const token = await getAccessToken()
   // const URL = 'https://api.twitter.com/1.1/search/tweets.json'
