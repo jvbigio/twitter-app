@@ -75,7 +75,7 @@ app.get('/api/tweets/search', async (req, res) => {
 
   const config = {
     headers: {
-      // 'Content-Type': 'application',h
+      // 'Content-Type': 'application',
       Authorization: `Bearer ${token}`
     },
     params: {
@@ -85,7 +85,6 @@ app.get('/api/tweets/search', async (req, res) => {
       result_type: 'recent'
     }
   }
-
 
   // to twitter to get the data
   axios.get(URL, config)
