@@ -20,7 +20,7 @@ function Search () {
     console.log(input)
 
     axios
-      .get(`/api/tweets/search?search_term=${input}`)
+      .get(`/api/tweets/content?search_term=${input}`)
       .then(response => setTweet(response.data))
       .catch(err => console.error(err))
     e.target.reset()

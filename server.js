@@ -69,7 +69,7 @@ const getUsers = async () => {
 
 getUsers()
 
-app.get('/api/tweets/search', async (req, res) => {
+app.get('/api/tweets/content', async (req, res) => {
   const token = await getAccessToken()
   const URL = 'https://api.twitter.com/1.1/search/tweets.json'
 
@@ -95,7 +95,7 @@ app.get('/api/tweets/search', async (req, res) => {
     })
 })
 
-app.get('/api/tweets/user', async (req, res) => {
+app.get('/api/tweets/username', async (req, res) => {
   const token = await getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
   const config = {
