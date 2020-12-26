@@ -71,23 +71,21 @@ getUsers()
 
 app.get('/api/tweets/search', async (req, res) => {
   const token = await getAccessToken()
-  // const URL = 'https://api.twitter.com/1.1/search/tweets.json'
-  const URL = `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.search_term}`
+  const URL = 'https://api.twitter.com/1.1/search/tweets.json'
+
   const config = {
     headers: {
-      // 'Content-Type': 'application',
+      // 'Content-Type': 'application',h
       Authorization: `Bearer ${token}`
     },
     params: {
-      // q: req.query.search_term,
-      // src: 'typed_query',
+      q: req.query.search_term,
       lang: 'en',
       count: 5,
       result_type: 'recent'
     }
   }
 
-  // added src above for testing
 
   // to twitter to get the data
   axios.get(URL, config)
