@@ -117,7 +117,7 @@ app.get('/api/tweets/username', async (req, res) => {
 })
 
 // by username?
-app.get('/api/tweets/user/:username', (req, res) => {
+app.get('/api/tweets/username/:username', (req, res) => {
   const user = twitterUsers.find(handle => handle.username === req.params.username)
 
   if (!user) res.status(404).send('Username given does not exist!')
