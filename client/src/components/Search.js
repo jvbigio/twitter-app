@@ -13,7 +13,7 @@ function Search () {
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
-    console.log(radioButton)
+    // console.log(radioButton)
   }
 
   const getUserInput = e => {
@@ -28,7 +28,8 @@ function Search () {
       .get(`/api/tweets/content?search_term=${input}`)
       .then(response => setTweet(response.data))
       .catch(err => console.error(err))
-    e.target.reset()
+
+    setInput('')
   }
 
   console.log(tweet)
