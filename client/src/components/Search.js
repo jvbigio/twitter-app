@@ -34,13 +34,13 @@ function Search () {
           <Form.Check
             className='mb-2 mr-sm-2'
             type='radio'
-            id='inlineFormRadio'
+            id='search-content'
             label='By content'
           />
           <Form.Check
             className='mb-2 mr-sm-2'
             type='radio'
-            id='inlineFormRadio'
+            id='search-username'
             label='By username'
           />
           <Form.Group controlId='search'>
