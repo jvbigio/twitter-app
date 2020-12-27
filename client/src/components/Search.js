@@ -68,7 +68,13 @@ function Search () {
         </Form>
       </div>
       <div className='content-card'>
-        <TweetCard input={input} />
+        <div className='wrapper'>
+          <TweetCard input={input} />
+          <TweetCard input={input} />
+          <TweetCard input={input} />
+          <TweetCard input={input} />
+          <TweetCard input={input} />
+        </div>
       </div>
     </div>
   )

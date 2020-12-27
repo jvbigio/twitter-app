@@ -1,6 +1,7 @@
 #tweet-card {
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
   background-color: transparent;
   /* original: */
   height: 30%;
@@ -13,3 +14,4 @@
 p.card-text {
   text-align: center;
 }
+

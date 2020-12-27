@@ -10,7 +10,8 @@ const TweetCard = (props) => {
   // }
 
   return (
-    <Card className='card' id='tweet-card'>
+  // <div className='container d-flex flex-column'>
+    <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         <div>
@@ -33,6 +34,7 @@ const TweetCard = (props) => {
         <i className='far fa-heart' />
       </Card.Footer>
     </Card>
+  // </div>
   )
 }
 
