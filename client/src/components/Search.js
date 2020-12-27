@@ -10,7 +10,6 @@ function Search () {
   const [tweet, setTweet] = useState([])
   const [user, setUser] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
-  // const [radioButton, setRadioButton] = useState('content')
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
