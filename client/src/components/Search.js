@@ -9,12 +9,12 @@ function Search () {
   const [input, setInput] = useState('')
   const [tweet, setTweet] = useState([])
   const [user, setUser] = useState([])
-  const [radioButton, setRadioButton] = useState(null)
+  const [radioButton, setRadioButton] = useState({ selected: 'content' })
+  // const [radioButton, setRadioButton] = useState('content')
 
   const handleRadioBtn = (e) => {
-    // setRadioButton(e.target.value)
-    // console.log(radioButton)
-    return (e.target.checked && !radioButton) ? setRadioButton(true) : setRadioButton(false)
+    setRadioButton({ selected: e.target.value })
+    console.log(radioButton)
   }
 
   const getUserInput = e => {
@@ -43,16 +43,18 @@ function Search () {
             type='radio'
             id='search-content'
             label='By content'
+            value='content'
             onChange={(e) => handleRadioBtn(e)}
-            checked={radioButton}
+            checked={radioButton.selected === 'content'}
           />
           <Form.Check
             className='mb-2 mr-sm-2'
             type='radio'
             id='search-username'
             label='By username'
+            value='username'
             onChange={(e) => handleRadioBtn(e)}
-            checked={radioButton}
+            checked={radioButton.selected === 'username'}
           />
           <Form.Group controlId='search'>
             <Form.Control
