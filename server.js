@@ -82,7 +82,7 @@ app.get('/api/tweets/content', async (req, res) => {
       q: req.query.search_term,
       lang: 'en',
       count: 5,
-      result_type: 'recent'
+      result_type: 'popular'
     }
   }
 
