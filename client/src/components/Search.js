@@ -31,6 +31,18 @@ function Search () {
     <div className='container'>
       <div className='form-container'>
         <Form onSubmit={handleSearch} inline className='search-box' autoComplete='off'>
+          <Form.Check
+            type='radio'
+            className='mb-2 mr-sm-2'
+            id='inlineFormRadio'
+            label='By content'
+          />
+          <Form.Check
+            type='radio'
+            className='mb-2 mr-sm-2'
+            id='inlineFormRadio'
+            label='By username'
+          />
           <Form.Group controlId='search'>
             <Form.Control
               type='text'

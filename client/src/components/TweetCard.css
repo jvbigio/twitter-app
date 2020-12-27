@@ -2,9 +2,12 @@
   margin-top: 50px;
   display: flex;
   background-color: transparent;
+  /* original: */
   height: 30%;
-  /* width: 50%; */
+
+  /* original: */
   width: 40%;
+  width: 35rem;
 }
 
 p.card-text {
