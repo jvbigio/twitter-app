@@ -4,11 +4,9 @@ const app = express()
 const path = require('path')
 const axios = require('axios')
 const qs = require('qs')
-// const { response } = require('express')
 require('dotenv').config()
 
 const port = process.env.PORT || 3000
-// app.use(express.json()) // do i need?
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
