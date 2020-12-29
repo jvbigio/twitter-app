@@ -13,7 +13,7 @@ function Search () {
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
-    // console.log(radioButton)
+    // console.log(typeof radioButton.selected) // content or selected (strings)
   }
 
   const getUserInput = e => {
