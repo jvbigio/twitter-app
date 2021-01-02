@@ -13,7 +13,7 @@ function Search () {
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
-    // console.log(typeof radioButton.selected) // content or selected (strings)
+    // console.log(radioButton.selected) // content or selected (strings)
   }
 
   const getUserInput = e => {
@@ -23,6 +23,7 @@ function Search () {
   const handleSearch = async (e) => {
     e.preventDefault()
     console.log(input)
+    console.log(radioButton)
 
     axios
       .get(`/api/tweets/content?search_term=${input}`)
