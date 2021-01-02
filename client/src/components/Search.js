@@ -23,12 +23,17 @@ function Search () {
   const handleSearch = async (e) => {
     e.preventDefault()
     console.log(input)
-    console.log(radioButton)
+    console.log(radioButton.selected)
 
+    // if radioButton.selected === 'content'
     axios
       .get(`/api/tweets/content?search_term=${input}`)
       .then(response => setTweet(response.data))
       .catch(err => console.error(err))
+
+    // if radioButton.selected === 'username'
+    // Code here....
+    // axios GET Request:
 
     setInput('')
   }
