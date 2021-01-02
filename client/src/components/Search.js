@@ -25,15 +25,13 @@ function Search () {
     console.log(input)
     console.log(radioButton.selected)
 
-    // if radioButton.selected === 'content'
+    const contentUrl = `/api/tweets/content?search_term=${input}`
+    const usernameUrl = `/api/tweets/username?username=${input}`
+
     axios
-      .get(`/api/tweets/content?search_term=${input}`)
+      .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
       .then(response => setTweet(response.data))
       .catch(err => console.error(err))
-
-    // if radioButton.selected === 'username'
-    // Code here....
-    // axios GET Request:
 
     setInput('')
   }
