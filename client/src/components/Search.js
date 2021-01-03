@@ -35,7 +35,7 @@ function Search () {
     setInput('')
   }
 
-  // console.log(tweet)
+  console.log(tweet)
 
   return (
     <div className='container'>
