@@ -51,21 +51,21 @@ const getAccessToken = async () => {
 // }
 // getTweets()
 
-const getUsers = async () => {
-  try {
-    const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from%3Agaryvee&result_type=recent&count=5', {
-      headers: {
-        'Content-Type': 'application',
-        Authorization: `Bearer ${process.env.BEARER_TOKEN}`
-      }
-    })
-    // console.log(response.data.statuses) // works
-  } catch (error) {
-    console.error(error)
-  }
-}
+// const getUsers = async () => {
+//   try {
+//     const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from%3Agaryvee&result_type=recent&count=5', {
+//       headers: {
+//         'Content-Type': 'application',
+//         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
+//       }
+//     })
+//     // console.log(response.data.statuses) // works
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
 
-getUsers()
+// getUsers()
 
 app.get('/api/tweets/content', async (req, res) => {
   const token = await getAccessToken()
@@ -84,7 +84,7 @@ app.get('/api/tweets/content', async (req, res) => {
     }
   }
 
-  // to twitter to get the data
+  // Retrieve data from Twitter:
   axios.get(URL, config)
     .then(response => res.send(response.data))
     .catch(error => {
