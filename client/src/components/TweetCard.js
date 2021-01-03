@@ -4,6 +4,11 @@ import avatar from '../images/popeye.jpg'
 import './TweetCard.css'
 
 const TweetCard = (props) => {
+// const TweetCard = ({ input }) => {
+  // above equivalent to:
+  // const input = props.input or
+  // const { input } = props
+
   // work on hiding tweet card unless the search input matches username/user:
   // if (props.input !== 'jdoe') {
   //   return <div />
