@@ -13,6 +13,7 @@ const TweetCard = ({ input, tweet }) => {
   // if (props.input !== 'jdoe') {
   //   return <div />
   // }
+  // tweet.map(data => console.log(data))
 
   return (
     <Card id='tweet-card'>

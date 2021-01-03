@@ -34,8 +34,8 @@ function Search () {
 
     setInput('')
   }
-
-  console.log(tweet)
+  // console.log(tweet) // orig
+  console.log(tweet.statuses)
 
   return (
     <div className='container'>
