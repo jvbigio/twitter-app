@@ -13,7 +13,6 @@ function Search () {
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
-    // console.log(radioButton.selected) // content or selected (strings)
   }
 
   const getUserInput = e => {
@@ -22,8 +21,8 @@ function Search () {
 
   const handleSearch = async (e) => {
     e.preventDefault()
-    console.log(input)
-    console.log(radioButton.selected)
+    // console.log(input) // works
+    // console.log(radioButton.selected) // content/username (string)
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
@@ -36,7 +35,7 @@ function Search () {
     setInput('')
   }
 
-  console.log(tweet)
+  // console.log(tweet)
 
   return (
     <div className='container'>
@@ -73,11 +72,11 @@ function Search () {
       </div>
       <div className='content-card'>
         <div className='wrapper'>
-          <TweetCard input={input} />
-          <TweetCard input={input} />
-          <TweetCard input={input} />
-          <TweetCard input={input} />
-          <TweetCard input={input} />
+          <TweetCard input={input} tweet={tweet} />
+          <TweetCard input={input} tweet={tweet} />
+          <TweetCard input={input} tweet={tweet} />
+          <TweetCard input={input} tweet={tweet} />
+          <TweetCard input={input} tweet={tweet} />
         </div>
       </div>
     </div>

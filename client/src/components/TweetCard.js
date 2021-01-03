@@ -3,8 +3,8 @@ import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
 import './TweetCard.css'
 
-const TweetCard = (props) => {
-// const TweetCard = ({ input }) => {
+// const TweetCard = (props) => { // original
+const TweetCard = ({ input, tweet }) => {
   // above equivalent to:
   // const input = props.input or
   // const { input } = props
