@@ -31,42 +31,6 @@ const getAccessToken = async () => {
   }
 }
 
-// getAccessToken()
-// const token = await getAccessToken() // like so
-
-// const getTweets = async () => {
-//   try {
-//     const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=recent&count=5', {
-//       headers: {
-//         'Content-Type': 'application',
-//         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
-//       }
-//     })
-
-//     // console.log(response.data) // works
-//     // app.get logic for searching tweet content goes here?
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
-// getTweets()
-
-// const getUsers = async () => {
-//   try {
-//     const response = await axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from%3Agaryvee&result_type=recent&count=5', {
-//       headers: {
-//         'Content-Type': 'application',
-//         Authorization: `Bearer ${process.env.BEARER_TOKEN}`
-//       }
-//     })
-//     // console.log(response.data.statuses) // works
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
-
-// getUsers()
-
 app.get('/api/tweets/content', async (req, res) => {
   const token = await getAccessToken()
   const URL = 'https://api.twitter.com/1.1/search/tweets.json'
@@ -114,17 +78,17 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
-// by username?
-app.get('/api/tweets/username/:username', (req, res) => {
-  const user = twitterUsers.find(handle => handle.username === req.params.username)
+// by username? Don't think I need this
+// app.get('/api/tweets/username/:username', (req, res) => {
+//   const user = twitterUsers.find(handle => handle.username === req.params.username)
 
-  if (!user) res.status(404).send('Username given does not exist!')
-  res.send(twitterUsers)
-})
+//   if (!user) res.status(404).send('Username given does not exist!')
+//   res.send(twitterUsers)
+// })
 
-app.get('/api/tweets/random', (req, res) => {
-  res.send('random tweet')
-})
+// app.get('/api/tweets/random', (req, res) => {
+//   res.send('random tweet')
+// })
 
 /*
 NOTES:
