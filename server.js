@@ -78,17 +78,17 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
-// by username? Don't think I need this
-// app.get('/api/tweets/username/:username', (req, res) => {
-//   const user = twitterUsers.find(handle => handle.username === req.params.username)
+// by username?
+app.get('/api/tweets/username/:username', (req, res) => {
+  const user = twitterUsers.find(handle => handle.username === req.params.username)
 
-//   if (!user) res.status(404).send('Username given does not exist!')
-//   res.send(twitterUsers)
-// })
+  if (!user) res.status(404).send('Username given does not exist!')
+  res.send(twitterUsers)
+})
 
-// app.get('/api/tweets/random', (req, res) => {
-//   res.send('random tweet')
-// })
+app.get('/api/tweets/random', (req, res) => {
+  res.send('random tweet')
+})
 
 /*
 NOTES:
