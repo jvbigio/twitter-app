@@ -60,13 +60,24 @@ app.get('/api/tweets/content', async (req, res) => {
 
 app.get('/api/tweets/username', async (req, res) => {
   const token = await getAccessToken()
-  const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+  // const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+
+  // Also try:
+  //  https://api.twitter.com/1.1/search/tweets.json?q%40garyvee
+  const URL = 'https://api.twitter.com/1.1/search/tweets.json'
+
   const config = {
     headers: {
       Authorization: `Bearer ${token}`
     },
+    // for user_timeline URL:
+    // params: {
+    //   screen_name: req.query.username,
+    //   count: 5
+    // }
+    // for /search/tweets URL:
     params: {
-      screen_name: req.query.username,
+      q: req.query.username,
       count: 5
     }
   }
