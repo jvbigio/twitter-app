@@ -104,7 +104,7 @@ app.get('/api/tweets/random', (req, res) => {
 
 /*
 NOTES:
-Routing refers to how an application’s endpoints (URIs) respond to client requests.
+Routing refers to how an application’s endpoints (URLs) respond to client requests.
 https://expressjs.com/en/guide/routing.html
 
 */
