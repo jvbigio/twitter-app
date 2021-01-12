@@ -19,6 +19,9 @@ const TweetCard = ({ input, tweet }) => {
   //     console.log(msg)
   //   )
   // })
+  for (const msg of tweet) {
+    console.log(msg)
+  }
 
   // getTweets()
 
