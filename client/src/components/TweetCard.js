@@ -14,17 +14,6 @@ const TweetCard = ({ input, tweet }) => {
   //   return <div />
   // }
 
-  // const getTweets = tweet.map(msg => {
-  //   return (
-  //     console.log(msg)
-  //   )
-  // })
-  for (const msg of tweet) {
-    console.log(msg)
-  }
-
-  // getTweets()
-
   // console.log(tweet.statuses) // works
 
   return (
