@@ -50,7 +50,7 @@ app.get('/api/tweets/content', async (req, res) => {
 
   // Retrieve data from Twitter:
   axios.get(URL, config)
-    .then(response => res.send(response.data))
+    .then(response => res.send(response.data.statuses))
     .catch(error => {
       console.error(error)
       res.sendStatus(500).send(error)
