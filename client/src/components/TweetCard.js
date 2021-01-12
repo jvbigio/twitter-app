@@ -15,6 +15,16 @@ const TweetCard = ({ input, tweet }) => {
   // }
 
   // console.log(tweet.statuses) // works
+  // console.log(tweet.user.screen_name)
+  // for (const msg of tweet) {
+  //   console.log(msg)
+  // }
+  // tweet.forEach(msg => console.log(msg))
+  const processTweets = tweet.map(msgFeed =>
+    <div key={msgFeed.id}>
+      <h3>{msgFeed.user}</h3>
+    </div>
+  )
 
   return (
     <Card id='tweet-card'>
@@ -27,7 +37,7 @@ const TweetCard = ({ input, tweet }) => {
               <br />
               <div>
                 <Card.Text>
-                  Do those pull-ups!
+                  {processTweets}
                 </Card.Text>
               </div>
             </div>

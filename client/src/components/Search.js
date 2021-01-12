@@ -22,10 +22,10 @@ function Search () {
   const handleSearch = async (e) => {
     e.preventDefault()
     // console.log(input) // works
-    console.log(radioButton.selected) // content/username (string)
+    // console.log(radioButton.selected) // content/username (string)
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
-    const usernameUrl = `/api/tweets/username?username=${input}` // orig
+    const usernameUrl = `/api/tweets/username?username=${input}`
     // const usernameUrl = `/api/tweets/username?screen_name=${input}` // Doesn't work
 
     axios
@@ -35,7 +35,8 @@ function Search () {
 
     setInput('')
   }
-  console.log(tweet) // orig
+
+  // console.log(tweet) // orig
   // console.log(tweet.statuses)
 
   return (
