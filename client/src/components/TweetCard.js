@@ -13,22 +13,16 @@ const TweetCard = ({ input, tweet }) => {
   // if (props.input !== 'jdoe') {
   //   return <div />
   // }
-  // tweet.map(data => console.log(data))
+
   // const getTweets = tweet.map(msg => {
   //   return (
   //     console.log(msg)
   //   )
   // })
-  // const processTweets = async ()
+
+  // getTweets()
+
   // console.log(tweet.statuses) // works
-  // console.log(typeof tweet)
-  // for (const msg of tweet) {
-  //   console.log(msg)
-  // }
-  const processTweets = Object.keys(tweet)
-  for (const msg of processTweets) {
-    console.log(msg)
-  }
 
   return (
     <Card id='tweet-card'>
