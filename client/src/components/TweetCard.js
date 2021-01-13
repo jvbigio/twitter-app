@@ -24,7 +24,7 @@ const TweetCard = ({ input, tweet }) => {
   //     </div>
   //   )
   // })
-  
+
   // try this
   const processTweets = tweet.map(msgFeed => msgFeed)
 
@@ -39,12 +39,12 @@ const TweetCard = ({ input, tweet }) => {
               <br />
               <div>
                 <Card.Text>
-                  {processTweets.text}
+                  {processTweets}
                 </Card.Text>
               </div>
             </div>
           </Card.Body>
-        </div>h
+        </div>
       </Card.Body>
       <Card.Footer className='d-flex justify-content-around'>
         <i className='far fa-comment' />
