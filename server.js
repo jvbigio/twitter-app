@@ -37,7 +37,6 @@ app.get('/api/tweets/content', async (req, res) => {
 
   const config = {
     headers: {
-      // 'Content-Type': 'application',
       Authorization: `Bearer ${token}`
     },
     params: {

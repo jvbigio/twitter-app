@@ -14,17 +14,19 @@ const TweetCard = ({ input, tweet }) => {
   //   return <div />
   // }
 
-  // console.log(tweet.statuses) // works
-  // console.log(tweet.user.screen_name)
-  // for (const msg of tweet) {
-  //   console.log(msg)
-  // }
-  // tweet.forEach(msg => console.log(msg))
-  const processTweets = tweet.map(msgFeed =>
-    <div key={msgFeed.id}>
-      <h3>{msgFeed.user}</h3>
-    </div>
-  )
+  // console.log(tweet)
+
+  // const processTweets = tweet.map(msgFeed => {
+  //   // console.log(msgFeed.text) // works
+  //   return (
+  //     <div key={msgFeed.id}>
+  //       <h3>{msgFeed.text}</h3>
+  //     </div>
+  //   )
+  // })
+  
+  // try this
+  const processTweets = tweet.map(msgFeed => msgFeed)
 
   return (
     <Card id='tweet-card'>
@@ -37,12 +39,12 @@ const TweetCard = ({ input, tweet }) => {
               <br />
               <div>
                 <Card.Text>
-                  {processTweets}
+                  {processTweets.text}
                 </Card.Text>
               </div>
             </div>
           </Card.Body>
-        </div>
+        </div>h
       </Card.Body>
       <Card.Footer className='d-flex justify-content-around'>
         <i className='far fa-comment' />
