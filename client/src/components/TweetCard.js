@@ -16,16 +16,6 @@ const TweetCard = ({ input, tweet }) => {
 
   // console.log(tweet)
 
-  // const processTweets = tweet.map(msgFeed => {
-  //   // console.log(msgFeed.text) // works
-  //   return (
-  //     <div key={msgFeed.id}>
-  //       <h3>{msgFeed.text}</h3>
-  //     </div>
-  //   )
-  // })
-
-  // try this
   const processTweets = tweet.map(t => {
     return (
       <p key={t.id}>
