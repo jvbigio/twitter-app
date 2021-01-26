@@ -26,7 +26,13 @@ const TweetCard = ({ input, tweet }) => {
   // })
 
   // try this
-  const processTweets = tweet.map(msgFeed => msgFeed)
+  const processTweets = tweet.map(t => {
+    return (
+      <p key={t.id}>
+        {t.text}
+      </p>
+    )
+  })
 
   return (
     <Card id='tweet-card'>
