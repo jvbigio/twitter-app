@@ -17,6 +17,7 @@ const TweetCard = ({ input, tweets }) => {
   // console.log(tweet)
 
   const processTweets = tweets.map(tweet => {
+    debugger
     return (
       <p key={tweet.id}>
         {tweet.text}
