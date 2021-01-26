@@ -17,13 +17,20 @@ const TweetCard = ({ input, tweets }) => {
   // console.log(tweet)
 
   const processTweets = tweets.map(tweet => {
-    debugger
     return (
       <p key={tweet.id}>
         {tweet.text}
       </p>
     )
   })
+
+  // const processTweets = tweets.map(tweet => {
+  //   return (
+  //     <p key={tweet.id}>
+  //       {tweet.text}
+  //     </p>
+  //   )
+  // })
 
   return (
     <Card id='tweet-card'>
