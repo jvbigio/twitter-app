@@ -7,7 +7,7 @@ import axios from 'axios'
 
 function Search () {
   const [input, setInput] = useState('')
-  const [tweet, setTweet] = useState([])
+  const [tweets, setTweets] = useState([])
   const [user, setUser] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
 
@@ -30,7 +30,7 @@ function Search () {
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
-      .then(response => setTweet(response.data))
+      .then(response => setTweets(response.data))
       .catch(err => console.error(err))
 
     setInput('')
@@ -74,11 +74,11 @@ function Search () {
       </div>
       <div className='content-card'>
         <div className='wrapper'>
-          <TweetCard input={input} tweet={tweet} />
-          <TweetCard input={input} tweet={tweet} />
-          <TweetCard input={input} tweet={tweet} />
-          <TweetCard input={input} tweet={tweet} />
-          <TweetCard input={input} tweet={tweet} />
+          <TweetCard input={input} tweets={tweets} />
+          <TweetCard input={input} tweets={tweets} />
+          <TweetCard input={input} tweets={tweets} />
+          <TweetCard input={input} tweets={tweets} />
+          <TweetCard input={input} tweets={tweets} />
         </div>
       </div>
     </div>

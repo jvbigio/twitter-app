@@ -4,7 +4,7 @@ import avatar from '../images/popeye.jpg'
 import './TweetCard.css'
 
 // const TweetCard = (props) => { // original
-const TweetCard = ({ input, tweet }) => {
+const TweetCard = ({ input, tweets }) => {
   // above equivalent to:
   // const input = props.input or
   // const { input } = props
@@ -16,10 +16,10 @@ const TweetCard = ({ input, tweet }) => {
 
   // console.log(tweet)
 
-  const processTweets = tweet.map(t => {
+  const processTweets = tweets.map(tweet => {
     return (
-      <p key={t.id}>
-        {t.text}
+      <p key={tweet.id}>
+        {tweet.text}
       </p>
     )
   })
