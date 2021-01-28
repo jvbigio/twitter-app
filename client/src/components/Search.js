@@ -21,8 +21,6 @@ function Search () {
 
   const handleSearch = async (e) => {
     e.preventDefault()
-    // console.log(input) // works
-    // console.log(radioButton.selected) // content/username (string)
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
