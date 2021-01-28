@@ -12,20 +12,11 @@ const TweetCard = ({ input, tweets }) => {
   // create an array of html objects JSX, and display it wherever you want based on the code in body of processTweets
   const processTweets = tweets.map(tweet => {
     return (
-      <div key={tweet.id}>
+      <p key={tweet.id}>
         {tweet.text}
-      </div>
+      </p>
     )
   })
-
-  // const processTweets = tweets.map(tweet => {
-  //   console.log(tweet.user.name)
-  //   return (
-  //     <p key={tweet.id}>
-  //       {tweet.text}
-  //     </p>
-  //   )
-  // })
 
   return (
     <Card id='tweet-card'>
@@ -37,7 +28,7 @@ const TweetCard = ({ input, tweets }) => {
             <div className='collapse-content'>
               <br />
               <div>
-                <Card.Text>
+                <Card.Text as='div'>
                   {processTweets}
                 </Card.Text>
               </div>
