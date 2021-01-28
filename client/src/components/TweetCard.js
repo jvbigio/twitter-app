@@ -9,21 +9,23 @@ const TweetCard = ({ input, tweets }) => {
   // const input = props.input or
   // const { input } = props
 
-  // work on hiding tweet card unless the search input matches username/user:
-  // if (props.input !== 'jdoe') {
-  //   return <div />
-  // }
-
-  // console.log(tweet)
-
-  // create an element for each tweet
+  // create an array of html objects JSX, and display it wherever you want based on the code in body of processTweets
   const processTweets = tweets.map(tweet => {
     return (
-      <p key={tweet.id}>
+      <div key={tweet.id}>
         {tweet.text}
-      </p>
+      </div>
     )
   })
+
+  // const processTweets = tweets.map(tweet => {
+  //   console.log(tweet.user.name)
+  //   return (
+  //     <p key={tweet.id}>
+  //       {tweet.text}
+  //     </p>
+  //   )
+  // })
 
   return (
     <Card id='tweet-card'>
@@ -36,7 +38,6 @@ const TweetCard = ({ input, tweets }) => {
               <br />
               <div>
                 <Card.Text>
-                  {/* create an array of html objects JSX, and display it wherever you want based on the code in body of processTweets */}
                   {processTweets}
                 </Card.Text>
               </div>
