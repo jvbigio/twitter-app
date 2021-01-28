@@ -16,6 +16,7 @@ const TweetCard = ({ input, tweets }) => {
 
   // console.log(tweet)
 
+  // create an element for each tweet
   const processTweets = tweets.map(tweet => {
     return (
       <p key={tweet.id}>
@@ -23,14 +24,6 @@ const TweetCard = ({ input, tweets }) => {
       </p>
     )
   })
-
-  // const processTweets = tweets.map(tweet => {
-  //   return (
-  //     <p key={tweet.id}>
-  //       {tweet.text}
-  //     </p>
-  //   )
-  // })
 
   return (
     <Card id='tweet-card'>
@@ -43,6 +36,7 @@ const TweetCard = ({ input, tweets }) => {
               <br />
               <div>
                 <Card.Text>
+                  {/* create an array of html objects JSX, and display it wherever you want based on the code in body of processTweets */}
                   {processTweets}
                 </Card.Text>
               </div>
