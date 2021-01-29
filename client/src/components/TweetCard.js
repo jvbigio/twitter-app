@@ -8,12 +8,13 @@ const TweetCard = ({ input, tweet }) => {
   // const input = props.input or
   // const { input } = props
 
+
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         <div>
-          <Card.Title className='name font-weight-bold mb-2' id='name'>JB <span className='font-weight-light' id='username'>{tweet.user.screen_name}</span></Card.Title>
+          <Card.Title className='name font-weight-bold mb-2' id='name'>{tweet.user.name} <span className='font-weight-light' id='username'>@{tweet.user.screen_name}</span></Card.Title>
           <Card.Body>
             <div className='collapse-content'>
               <br />
