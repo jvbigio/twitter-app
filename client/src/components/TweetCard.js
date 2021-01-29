@@ -8,7 +8,6 @@ const TweetCard = ({ input, tweet }) => {
   // const input = props.input or
   // const { input } = props
 
-
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
@@ -29,7 +28,7 @@ const TweetCard = ({ input, tweet }) => {
       </Card.Body>
       <Card.Footer className='d-flex justify-content-around'>
         <i className='far fa-comment' />
-        <i className='fas fa-retweet' />
+        <i className='fas fa-retweet'> {tweet.retweet_count}</i>
         <i className='far fa-heart' />
       </Card.Footer>
     </Card>
