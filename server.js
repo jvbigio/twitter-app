@@ -43,7 +43,8 @@ app.get('/api/tweets/content', async (req, res) => {
       q: req.query.search_term,
       lang: 'en',
       count: 5,
-      result_type: 'popular'
+      result_type: 'popular',
+      tweet_mode: 'extended'
     }
   }
 
@@ -72,7 +73,8 @@ app.get('/api/tweets/username', async (req, res) => {
     // for user_timeline URL:
     params: {
       screen_name: req.query.username,
-      count: 5
+      count: 5,
+      tweet_mode: 'extended'
     }
     // for /search/tweets URL:
     // params: {
