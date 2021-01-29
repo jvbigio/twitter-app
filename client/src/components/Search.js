@@ -24,7 +24,6 @@ function Search () {
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
-    // const usernameUrl = `/api/tweets/username?screen_name=${input}` // Doesn't work
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
