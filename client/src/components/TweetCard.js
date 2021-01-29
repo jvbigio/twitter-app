@@ -27,7 +27,7 @@ const TweetCard = ({ input, tweet }) => {
         </div>
       </Card.Body>
       <Card.Footer className='d-flex justify-content-around'>
-        <i className='far fa-comment' />
+        <i className='far fa-comment'> {tweet.display_text_range[1]}</i>
         <i className='fas fa-retweet'> {tweet.retweet_count}</i>
         <i className='far fa-heart'> {tweet.favorite_count}</i>
       </Card.Footer>
