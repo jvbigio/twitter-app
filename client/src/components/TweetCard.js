@@ -19,7 +19,7 @@ const TweetCard = ({ input, tweet }) => {
               <br />
               <div>
                 <Card.Text as='div'>
-                  {tweet.text}
+                  {tweet.full_text}
                 </Card.Text>
               </div>
             </div>
