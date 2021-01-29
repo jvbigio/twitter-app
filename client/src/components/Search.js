@@ -27,11 +27,15 @@ function Search () {
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
-      .then(response => setTweets(response.data))
+      .then(response => setTweets(response.data)) // [] of 10 tweets
       .catch(err => console.error(err))
 
     setInput('')
   }
+
+  const tweetCards = tweets.map(tweet => {
+    return <TweetCard key={tweet.id} tweet={tweet} />
+  }) // [] of JSX
 
   return (
     <div className='container'>
@@ -68,11 +72,7 @@ function Search () {
       </div>
       <div className='content-card'>
         <div className='wrapper'>
-          <TweetCard input={input} tweets={tweets} />
-          <TweetCard input={input} tweets={tweets} />
-          <TweetCard input={input} tweets={tweets} />
-          <TweetCard input={input} tweets={tweets} />
-          <TweetCard input={input} tweets={tweets} />
+          {tweetCards}
         </div>
       </div>
     </div>

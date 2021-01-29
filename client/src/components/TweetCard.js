@@ -3,32 +3,23 @@ import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
 import './TweetCard.css'
 
-const TweetCard = ({ input, tweets }) => {
+const TweetCard = ({ input, tweet }) => {
   // above equivalent to:
   // const input = props.input or
   // const { input } = props
-
-  // create an array of html objects JSX, and display it wherever you want
-  const processTweets = tweets.map(tweet => {
-    return (
-      <p key={tweet.id}>
-        {tweet.text}
-      </p>
-    )
-  })
 
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
         <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         <div>
-          <Card.Title className='name font-weight-bold mb-2' id='name'>jdoe <span className='font-weight-light' id='username'>@beej</span></Card.Title>
+          <Card.Title className='name font-weight-bold mb-2' id='name'>JB <span className='font-weight-light' id='username'>{tweet.user.screen_name}</span></Card.Title>
           <Card.Body>
             <div className='collapse-content'>
               <br />
               <div>
                 <Card.Text as='div'>
-                  {processTweets}
+                  {tweet.text}
                 </Card.Text>
               </div>
             </div>
