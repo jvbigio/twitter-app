@@ -8,7 +8,7 @@ const TweetCard = ({ input, tweets }) => {
   // const input = props.input or
   // const { input } = props
 
-  // create an array of html objects JSX, and display it wherever you want based on the code in body of processTweets
+  // create an array of html objects JSX, and display it wherever you want
   const processTweets = tweets.map(tweet => {
     return (
       <p key={tweet.id}>
