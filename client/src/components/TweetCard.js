@@ -4,10 +4,6 @@ import avatar from '../images/popeye.jpg'
 import './TweetCard.css'
 
 const TweetCard = ({ input, tweet }) => {
-  // above equivalent to:
-  // const input = props.input or
-  // const { input } = props
-
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
