@@ -9,7 +9,13 @@ const TweetCard = ({ input, tweet }) => {
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
-        <img src={tweet.user.profile_image_url_https} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
+        <img
+          src={tweet.user.profile_image_url_https}
+          alt='avatar'
+          className='rounded-circle mr-3 image-container'
+          height='50px'
+          width='50px'
+        />
         <div className='row'>
           <Card.Title className='name font-weight-bold mb-2' id='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='font-weight-light' id='username'>@{tweet.user.screen_name}</span></Card.Title>
           <Card.Body>
