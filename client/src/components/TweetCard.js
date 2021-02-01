@@ -16,7 +16,7 @@ const TweetCard = ({ input, tweet }) => {
           height='50px'
           width='50px'
         />
-        <div className='row'>
+        <div className='row d-flex align-items-start'>
           <Card.Title className='name font-weight-bold mb-2' id='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='font-weight-light' id='username'>@{tweet.user.screen_name}</span></Card.Title>
           <Card.Body>
             <div className='collapse-content'>
