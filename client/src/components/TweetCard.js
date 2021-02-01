@@ -1,13 +1,14 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import avatar from '../images/popeye.jpg'
+// import avatar from '../images/popeye.jpg' // orig
+// import avatar from 'https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_normal.jpg'
 import './TweetCard.css'
 
 const TweetCard = ({ input, tweet }) => {
   return (
     <Card id='tweet-card'>
       <Card.Body className='d-flex flex-row'>
-        <img src={avatar} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
+        <img src={tweet.user.profile_image_url_https} alt='avatar' className='rounded-circle mr-3' height='50px' width='50px' />
         <div>
           <Card.Title className='name font-weight-bold mb-2' id='name'>{tweet.user.name} <span className='font-weight-light' id='username'>@{tweet.user.screen_name}</span></Card.Title>
           <Card.Body>
