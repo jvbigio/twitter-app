@@ -19,3 +19,7 @@ p.card-text {
 /* .fa-retweet {
   font-weight: normal;
 } */
+
+#username {
+  font-size: small;
+}
