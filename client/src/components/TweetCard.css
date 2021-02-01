@@ -20,10 +20,6 @@ p.card-text {
   font-weight: normal;
 } */
 
-#username {
-  font-size: small;
-}
-
 /* svg {
   display: inline-flex;
   align-items: center;
@@ -49,4 +45,5 @@ p.card-text {
 
 .username {
   font-weight: 300;
+  font-size: small;
 }

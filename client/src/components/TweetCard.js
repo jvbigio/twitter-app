@@ -17,7 +17,9 @@ const TweetCard = ({ input, tweet }) => {
           width='50px'
         />
         <div className='row d-flex' id='row'>
-          <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username' id='username'>@{tweet.user.screen_name} </span> &middot;</Card.Title>
+          <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} &middot;</span>
+            <span className='created'>{tweet.create_at}</span>
+          </Card.Title>
           <Card.Body>
             <div className='collapse-content'>
               <br />
