@@ -14,17 +14,24 @@
 
 .image-container {
   align-items: flex-start;
-  margin-left: 5px;
+  margin: 1rem;
+}
+
+.image-container img {
+  border-radius: 50%;
+  /* margin-left: 2rem; */
 }
 
 .card-body {
   display: flex;
   /* orig: row */
+  /* align-items: flex-start; */
   flex-direction: row;
 }
 
 p.card-text {
-  /* text-align: center; */
+  text-align: center;
+  /* overflow: hidden; */
 }
 
 /* causes retweet icon to disappear: */
@@ -45,9 +52,11 @@ p.card-text {
 } */
 
 #row {
-  margin-left: 10px;
+  margin-left: 60px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  /* align-items: center; */
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
