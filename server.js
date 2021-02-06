@@ -74,7 +74,8 @@ app.get('/api/tweets/username', async (req, res) => {
     params: {
       screen_name: req.query.username,
       count: 5,
-      tweet_mode: 'extended'
+      tweet_mode: 'extended',
+      exclude_replies: false
     }
     // for /search/tweets URL:
     // params: {
