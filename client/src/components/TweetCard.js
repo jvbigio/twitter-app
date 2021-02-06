@@ -8,14 +8,16 @@ import { HiOutlineBadgeCheck } from 'react-icons/hi'
 const TweetCard = ({ input, tweet }) => {
   return (
     <Card id='tweet-card'>
-      <Card.Body className='d-flex flex-row'>
+      <div className='image-container'>
         <img
           src={tweet.user.profile_image_url_https}
           alt='avatar'
-          className='rounded-circle mr-3 image-container'
+          className='rounded-circle mr-3'
           height='50px'
           width='50px'
         />
+      </div>
+      <Card.Body>
         <div className='row d-flex' id='row'>
           <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} &middot;</span>
             <span className='created'>{tweet.create_at}</span>

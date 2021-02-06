@@ -9,10 +9,22 @@
   /* original: */
   width: 40%;
   width: 35rem;
+  /* align-items: center; */
+}
+
+.image-container {
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.card-body {
+  display: flex;
+  /* orig: row */
+  flex-direction: row;
 }
 
 p.card-text {
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* causes retweet icon to disappear: */
@@ -36,6 +48,7 @@ p.card-text {
   margin-left: 10px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .name {
