@@ -11,7 +11,7 @@ const TweetCard = ({ input, tweet }) => {
         <img
           src={tweet.user.profile_image_url_https}
           alt='user profile'
-          // className='rounded-circle mr-3'
+          // className='rounded-circle mr-3' // orig
           height='50px'
           width='50px'
         />
