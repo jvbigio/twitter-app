@@ -12,10 +12,10 @@
   /* align-items: center; */
 }
 
-.image-container {
+/* .image-container {
   align-items: flex-start;
   margin: 1rem;
-}
+} */
 
 .image-container img {
   border-radius: 50%;
@@ -59,7 +59,7 @@ p.card-text {
   /* margin-bottom: 2px; */
 }
 
-.username {
+.username, .created {
   font-weight: 300;
   font-size: small;
 }
