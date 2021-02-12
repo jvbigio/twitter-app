@@ -1,7 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-// import avatar from '../images/popeye.jpg' // orig
-// import avatar from 'https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_normal.jpg'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 
