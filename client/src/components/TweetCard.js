@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
+import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
   return (
