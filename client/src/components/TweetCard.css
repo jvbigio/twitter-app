@@ -19,14 +19,12 @@
 
 .image-container img {
   border-radius: 50%;
-  /* margin-left: 2rem; */
 }
 
 .card-body {
   display: flex;
-  /* orig: row */
-  /* align-items: flex-start; */
-  flex-direction: row;
+  align-items: flex-start;
+  /* flex-direction: row;
 }
 
 p.card-text {
@@ -39,10 +37,6 @@ p.card-text {
   font-weight: normal;
 } */
 
-/* svg {
-  display: inline-flex;
-  align-items: center;
-} */
 
 /* .row {
   display: flex;
@@ -51,14 +45,14 @@ p.card-text {
   margin-left: 20rem;
 } */
 
-#row {
+/* #row {
   margin-left: 60px;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
   align-items: flex-start;
   flex-wrap: wrap;
-}
+} */
 
 .name {
   font-weight: bold;
