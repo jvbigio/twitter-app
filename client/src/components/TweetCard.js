@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
+import Image from 'react-bootstrap/Image'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import Moment from 'react-moment'
