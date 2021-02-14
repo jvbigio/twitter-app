@@ -1,36 +1,41 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
 #tweet-card {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  /* background-color: transparent; */
   background-color: #f2f2f2;
-  /* original: */
   height: 30%;
 
-  /* original: */
   width: 40%;
   width: 35rem;
-  /* align-items: center; */
+  width: 50%;
 }
 
-/* .image-container {
-  align-items: flex-start;
-  margin: 1rem;
-} */
-
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .image-container img {
   border-radius: 50%;
+  /* width: 50px;
+  height: 50px; */
+  max-width: 100%;
+  height: auto;
+  margin: 10px 5px 0 20px;
 }
 
-.card-body {
+/* .card-body {
   display: flex;
   align-items: flex-start;
-  /* flex-direction: row;
-}
+} */
 
 p.card-text {
   text-align: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 /* causes retweet icon to disappear: */
@@ -55,22 +60,16 @@ p.card-text {
   flex-wrap: wrap;
 } */
 
-.name {
-  /* font-weight: bold; */
-  /* margin-bottom: 2px; */
+/* .name {
+  font-weight: bold;
+  margin-bottom: 2px;
+} */
+
+.username {
+  margin-left: 0.5rem;
 }
 
 .username, .created {
   font-weight: 300;
   font-size: small;
 }
-
-/* .fa-circle {
-  size: .5em;
-} */
-
-/* .circle {
-  margin-left: .05rem;
-  size: .2em;
-  font-size: .2em;
-} */
