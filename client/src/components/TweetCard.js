@@ -14,17 +14,15 @@ const TweetCard = ({ input, tweet }) => {
   return (
     <Container fluid>
       <Card id='tweet-card'>
-        <Row as='div'>
-          <div className='image-container'>
-            <img
+        <Card.Body>
+          <Row as='div'>
+            <div className='image-container'>
+              <img
               // className='image-container'
-              src={tweet.user.profile_image_url_https}
-              alt='user profile'
-              // height='50px'
-              // width='50px'
-            />
-          </div>
-          <Card.Body>
+                src={tweet.user.profile_image_url_https}
+                alt='user profile'
+              />
+            </div>
             <Card.Title className='name'>
               {tweet.user.name}
               <HiOutlineBadgeCheck />
@@ -36,10 +34,10 @@ const TweetCard = ({ input, tweet }) => {
                 <Moment fromNow>{tweet.created_at}</Moment>
               </span>
             </Card.Title>
-          </Card.Body>
-        </Row>
+          </Row>
+        </Card.Body>
         <Card.Body>
-          <br />
+          {/* <br /> */}
           <div>
             <Card.Text as='div'>
               {tweet.full_text}
