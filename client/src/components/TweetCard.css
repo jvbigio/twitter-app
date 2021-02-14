@@ -87,8 +87,10 @@ p.card-text {
 
 
 /* Media Queries */
-/* @media(max-width: 667px) {
+@media(max-width: 576px) {
   .row {
+    /* display: flex; */
     flex-direction: column;
+    align-items: center;
   }
-} */
+}
