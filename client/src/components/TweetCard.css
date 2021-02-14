@@ -2,7 +2,8 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #f2f2f2;
   /* original: */
   height: 30%;
 
@@ -55,7 +56,7 @@ p.card-text {
 } */
 
 .name {
-  font-weight: bold;
+  /* font-weight: bold; */
   /* margin-bottom: 2px; */
 }
 
@@ -63,3 +64,13 @@ p.card-text {
   font-weight: 300;
   font-size: small;
 }
+
+/* .fa-circle {
+  size: .5em;
+} */
+
+/* .circle {
+  margin-left: .05rem;
+  size: .2em;
+  font-size: .2em;
+} */

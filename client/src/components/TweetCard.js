@@ -1,8 +1,14 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
+import { BsDash } from 'react-icons/bs'
+
+
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
@@ -19,7 +25,7 @@ const TweetCard = ({ input, tweet }) => {
       </div>
       <Card.Body>
         <div className='row d-flex' id='row'>
-          <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} &middot;</span>
+          <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} <BsDash /> </span>
             <span className='created'>
               <Moment fromNow>{tweet.created_at}</Moment>
             </span>
