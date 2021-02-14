@@ -8,7 +8,6 @@ import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { BsDash } from 'react-icons/bs'
 
-
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
@@ -25,19 +24,26 @@ const TweetCard = ({ input, tweet }) => {
       </div>
       <Card.Body>
         <div className='row d-flex' id='row'>
-          <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} <BsDash /> </span>
+          <Card.Title className='name'>
+            {tweet.user.name}
+            <HiOutlineBadgeCheck />
+            <span className='username'>
+              @{tweet.user.screen_name}
+              <BsDash />
+            </span>
             <span className='created'>
               <Moment fromNow>{tweet.created_at}</Moment>
             </span>
           </Card.Title>
           <Card.Body>
-            <div className='collapse-content'>
-              <br />
-              <div>
-                <Card.Text as='div'>
-                  {tweet.full_text}
-                </Card.Text>
-              </div>
+            {/* <div className='collapse-content'> */}
+            {/* <div> */}
+            <br />
+            <div>
+              <Card.Text as='div'>
+                {tweet.full_text}
+              </Card.Text>
+              {/* </div> */}
             </div>
           </Card.Body>
         </div>
