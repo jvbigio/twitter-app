@@ -16,11 +16,9 @@
 
 .row {
   display: flex;
-  justify-content: center;
-  /* justify-content: flex-start; */
+  justify-content: flex-start;
   flex-wrap: wrap;
-  flex-basis: content;
-  /* padding-left: 5px; */
+  padding-left: 5px;
 }
 
 /* .image-container {
@@ -32,7 +30,7 @@
   max-width: 100%;
   height: auto;
   /* margin: 10px 5px 0 20px; */
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 /* .card-title {
@@ -86,3 +84,11 @@ p.card-text {
   font-weight: 300;
   font-size: small;
 }
+
+
+/* Media Queries */
+/* @media(max-width: 667px) {
+  .row {
+    flex-direction: column;
+  }
+} */
