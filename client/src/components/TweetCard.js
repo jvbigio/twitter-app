@@ -12,7 +12,12 @@ import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
   const tweetImage = tweet.entities.media
-  console.log(tweetImage)
+
+  const imgStyle = {
+    // width: 'auto',
+    maxHeight: '300px',
+    maxWidth: '325px'
+  }
 
   return (
     <Container fluid>
@@ -43,9 +48,14 @@ const TweetCard = ({ input, tweet }) => {
             <Card.Text as='div'>
               {tweet.full_text}
               <div className='img-card'>
-                {/* {tweetImage} */}
+                {/* <a href={tweetImage ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'> */}
                 {/* {(tweetImage) || null} */}
-                {/* <img src={tweet.entities.media.display_url} alt='tweet media' /> */}
+                <img
+                  src={tweetImage ? tweetImage[0].url : null}
+                  alt=''
+                  style={tweetImage ? imgStyle : null}
+                />
+                {/* </a> */}
               </div>
             </Card.Text>
           </div>
