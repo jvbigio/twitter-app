@@ -16,11 +16,11 @@ const TweetCard = ({ input, tweet }) => {
   // check if img present
   const hasImage = () => tweetImage ? tweetImage[0].media_url : null
 
-
   const imgStyle = {
-    // width: 'auto',
+    width: 'auto',
     maxHeight: '300px',
-    maxWidth: '325px'
+    maxWidth: '325px',
+    borderRadius: '5%'
   }
 
   return (
@@ -55,7 +55,7 @@ const TweetCard = ({ input, tweet }) => {
                 {/* <a href={tweetImage ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'> */}
                 {/* {(tweetImage) || null} */}
                 <img
-                  // src={tweetImage ? tweetImage[0].media_url : null} 
+                  // src={tweetImage ? tweetImage[0].media_url : null}
                   src={hasImage()}
                   alt=''
                   style={tweetImage ? imgStyle : null}
@@ -65,7 +65,7 @@ const TweetCard = ({ input, tweet }) => {
             </Card.Text>
           </div>
         </Card.Body>
-        <Card.Footer className='d-flex justify-content-around'>
+        <Card.Footer className='d-flex justify-content-around rounded-bottom'>
           <i className='far fa-comment'> {tweet.display_text_range[1]}</i>
           <i className='fas fa-retweet'> {tweet.retweet_count}</i>
           <i className='far fa-heart'> {tweet.favorite_count}</i>
