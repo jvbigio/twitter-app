@@ -74,7 +74,6 @@ app.get('/api/tweets/username', async (req, res) => {
       // include_rts: false
     }
   }
-
   // GET request to Twitter:
   axios.get(URL, config)
     .then(response => res.send(response.data))
