@@ -18,8 +18,8 @@ const TweetCard = ({ input, tweet }) => {
 
   const imgStyle = {
     width: 'auto',
-    maxHeight: '300px',
-    maxWidth: '325px',
+    Height: 'auto',
+    maxWidth: '100%',
     borderRadius: '5%'
   }
 
