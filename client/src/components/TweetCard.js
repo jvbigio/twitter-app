@@ -45,6 +45,7 @@ const TweetCard = ({ input, tweet }) => {
               <div className='img-card'>
                 {/* {tweetImage} */}
                 {/* {(tweetImage) || null} */}
+                {/* <img src={tweet.entities.media.display_url} alt='tweet media' /> */}
               </div>
             </Card.Text>
           </div>
