@@ -51,7 +51,7 @@ const TweetCard = ({ input, tweet }) => {
                 {/* <a href={tweetImage ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'> */}
                 {/* {(tweetImage) || null} */}
                 <img
-                  src={tweetImage ? tweetImage[0].url : null}
+                  src={tweetImage ? tweetImage[0].media_url : null}
                   alt=''
                   style={tweetImage ? imgStyle : null}
                 />

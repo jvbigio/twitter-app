@@ -63,6 +63,11 @@ p.card-text {
   font-size: small;
 }
 
+.img-card {
+  display: flex;
+  justify-content: center;
+}
+
 /* Media Queries */
 @media(max-width: 576px) {
   .row {
