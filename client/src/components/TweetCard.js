@@ -13,6 +13,10 @@ import Moment from 'react-moment'
 const TweetCard = ({ input, tweet }) => {
   const tweetImage = tweet.entities.media
 
+  // check if img present
+  const hasImage = () => tweetImage ? tweetImage[0].media_url : null
+
+
   const imgStyle = {
     // width: 'auto',
     maxHeight: '300px',
@@ -51,7 +55,8 @@ const TweetCard = ({ input, tweet }) => {
                 {/* <a href={tweetImage ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'> */}
                 {/* {(tweetImage) || null} */}
                 <img
-                  src={tweetImage ? tweetImage[0].media_url : null}
+                  // src={tweetImage ? tweetImage[0].media_url : null} 
+                  src={hasImage()}
                   alt=''
                   style={tweetImage ? imgStyle : null}
                 />
