@@ -1,35 +1,50 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
 #tweet-card {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
-  /* original: */
+  background-color: #f2f2f2;
   height: 30%;
 
-  /* original: */
   width: 40%;
   width: 35rem;
-  /* align-items: center; */
+  width: 50%;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 5px;
 }
 
 /* .image-container {
-  align-items: flex-start;
-  margin: 1rem;
+  justify-content: flex-start;
 } */
 
 .image-container img {
   border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  /* margin: 10px 5px 0 20px; */
+  /* margin-left: 10px; */
 }
 
-.card-body {
+/* .card-title {
+  text-align: center;
+} */
+
+/* .card-body {
   display: flex;
   align-items: flex-start;
-  /* flex-direction: row;
-}
+} */
 
 p.card-text {
   text-align: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 /* causes retweet icon to disappear: */
@@ -37,29 +52,28 @@ p.card-text {
   font-weight: normal;
 } */
 
+/* .name { */
+  /* font-weight: bold;
+  margin-bottom: 2px; */
+  /* padding-left: 5px; */
+  /* justify-content: flex-start; */
+/* } */
 
-/* .row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 20rem;
-} */
-
-/* #row {
-  margin-left: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-} */
-
-.name {
-  font-weight: bold;
-  /* margin-bottom: 2px; */
+.username {
+  margin-left: 0.5rem;
 }
 
 .username, .created {
   font-weight: 300;
   font-size: small;
+}
+
+
+/* Media Queries */
+@media(max-width: 576px) {
+  .row {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+  }
 }
