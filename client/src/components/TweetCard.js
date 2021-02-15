@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Image from 'react-bootstrap/Image'
+// import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+// import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { BsDash } from 'react-icons/bs'
@@ -11,6 +11,9 @@ import { BsDash } from 'react-icons/bs'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
+  const tweetImage = tweet.entities.media
+  console.log(tweetImage)
+
   return (
     <Container fluid>
       <Card id='tweet-card'>
@@ -39,6 +42,10 @@ const TweetCard = ({ input, tweet }) => {
           <div>
             <Card.Text as='div'>
               {tweet.full_text}
+              <div className='img-card'>
+                {/* {tweetImage} */}
+                {/* {(tweetImage) || null} */}
+              </div>
             </Card.Text>
           </div>
         </Card.Body>
