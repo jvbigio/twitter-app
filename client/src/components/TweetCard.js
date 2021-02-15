@@ -52,15 +52,15 @@ const TweetCard = ({ input, tweet }) => {
             <Card.Text as='div'>
               {tweet.full_text}
               <div className='img-card'>
-                {/* <a href={tweetImage ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'> */}
-                {/* {(tweetImage) || null} */}
-                <img
+                <a href={(tweetImage) ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'>
+                  {/* {(tweetImage) || null} */}
+                  <img
                   // src={tweetImage ? tweetImage[0].media_url : null}
-                  src={hasImage()}
-                  alt=''
-                  style={tweetImage ? imgStyle : null}
-                />
-                {/* </a> */}
+                    src={hasImage()}
+                    alt=''
+                    style={tweetImage ? imgStyle : null}
+                  />
+                </a>
               </div>
             </Card.Text>
           </div>
