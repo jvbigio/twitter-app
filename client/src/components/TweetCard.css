@@ -53,28 +53,14 @@ p.card-text {
 } */
 
 
-/* .row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 20rem;
-} */
 
-/* #row {
-  margin-left: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-} */
 
-.name {
+/* .name { */
   /* font-weight: bold;
   margin-bottom: 2px; */
   /* padding-left: 5px; */
   /* justify-content: flex-start; */
-}
+/* } */
 
 .username {
   margin-left: 0.5rem;
