@@ -1,72 +1,78 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Media from 'react-bootstrap/Media'
-// import avatar from '../images/popeye.jpg' // orig
-// import avatar from 'https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_normal.jpg'
+// import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
+import { BsDash } from 'react-icons/bs'
+
+import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
+  const tweetImage = tweet.entities.media
+
+  // check if img present
+  const hasImage = () => tweetImage ? tweetImage[0].media_url : null
+
+  const imgStyle = {
+    width: 'auto',
+    Height: 'auto',
+    maxWidth: '100%',
+    borderRadius: '5%'
+  }
+
   return (
-    <Card id='tweet-card'>
-      <Media>
-        <img
-          width='50px'
-          height='50px'
-          className='rounded-circle mr-3'
-          src={tweet.user.profile_image_url_https}
-          alt='avatar'
-        />
-        <Media.Body>
-          <h5>{tweet.user.name}</h5>
-          <p>{tweet.full_text}</p>
-        </Media.Body>
-        <Card.Footer className='d-flex justify-content-around'>
+    <Container fluid>
+      <Card id='tweet-card'>
+        <Card.Body>
+          <Row as='div'>
+            <div className='image-container'>
+              <img
+                src={tweet.user.profile_image_url_https}
+                alt='user profile'
+              />
+            </div>
+            <Card.Title className='name'>
+              {tweet.user.name}
+              <HiOutlineBadgeCheck />
+              <span className='username'>
+                @{tweet.user.screen_name}
+                <BsDash />
+              </span>
+              <span className='created'>
+                <Moment fromNow>{tweet.created_at}</Moment>
+              </span>
+            </Card.Title>
+          </Row>
+        </Card.Body>
+        <Card.Body>
+          <div>
+            <Card.Text as='div'>
+              {tweet.full_text}
+              <div className='img-card'>
+                <a href={(tweetImage) ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'>
+                  {/* {(tweetImage) || null} */}
+                  <img
+                  // src={tweetImage ? tweetImage[0].media_url : null}
+                    src={hasImage()}
+                    alt=''
+                    style={tweetImage ? imgStyle : null}
+                  />
+                </a>
+              </div>
+            </Card.Text>
+          </div>
+        </Card.Body>
+        <Card.Footer className='d-flex justify-content-around rounded-bottom'>
           <i className='far fa-comment'> {tweet.display_text_range[1]}</i>
           <i className='fas fa-retweet'> {tweet.retweet_count}</i>
           <i className='far fa-heart'> {tweet.favorite_count}</i>
         </Card.Footer>
-      </Media>
-
-    </Card>
+      </Card>
+    </Container>
   )
 }
-// const TweetCard = ({ input, tweet }) => {
-//   return (
-//     <Card id='tweet-card'>
-//       <div className='image-container'>
-//         <img
-//           src={tweet.user.profile_image_url_https}
-//           alt='avatar'
-//           className='rounded-circle mr-3'
-//           height='50px'
-//           width='50px'
-//         />
-//       </div>
-//       <Card.Body>
-//         <div className='row d-flex' id='row'>
-//           <Card.Title className='name'>{tweet.user.name} <HiOutlineBadgeCheck /> <span className='username'>@{tweet.user.screen_name} &middot;</span>
-//             <span className='created'>{tweet.create_at}</span>
-//           </Card.Title>
-//           <Card.Body>
-//             <div className='collapse-content'>
-//               <br />
-//               <div>
-//                 <Card.Text as='div'>
-//                   {tweet.full_text}
-//                 </Card.Text>
-//               </div>
-//             </div>
-//           </Card.Body>
-//         </div>
-//       </Card.Body>
-//       <Card.Footer className='d-flex justify-content-around'>
-//         <i className='far fa-comment'> {tweet.display_text_range[1]}</i>
-//         <i className='fas fa-retweet'> {tweet.retweet_count}</i>
-//         <i className='far fa-heart'> {tweet.favorite_count}</i>
-//       </Card.Footer>
-//     </Card>
-//   )
-// }
 
 export default TweetCard
