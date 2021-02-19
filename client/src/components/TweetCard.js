@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 // import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { BsDash } from 'react-icons/bs'
@@ -28,23 +28,25 @@ const TweetCard = ({ input, tweet }) => {
       <Card id='tweet-card'>
         <Card.Body>
           <Row as='div'>
-            <div className='image-container'>
-              <img
-                src={tweet.user.profile_image_url_https}
-                alt='user profile'
-              />
-            </div>
-            <Card.Title className='name'>
-              {tweet.user.name}
-              <HiOutlineBadgeCheck />
-              <span className='username'>
-                @{tweet.user.screen_name}
-                <BsDash />
-              </span>
-              <span className='created'>
-                <Moment fromNow>{tweet.created_at}</Moment>
-              </span>
-            </Card.Title>
+            <Col>
+              <div className='image-container'>
+                <img
+                  src={tweet.user.profile_image_url_https}
+                  alt='user profile'
+                />
+              </div>
+              <Card.Title className='name'>
+                {tweet.user.name}
+                <HiOutlineBadgeCheck />
+                <span className='username'>
+                  @{tweet.user.screen_name}
+                  <BsDash />
+                </span>
+                <span className='created'>
+                  <Moment fromNow>{tweet.created_at}</Moment>
+                </span>
+              </Card.Title>
+            </Col>
           </Row>
         </Card.Body>
         <Card.Body>
