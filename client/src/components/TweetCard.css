@@ -22,9 +22,6 @@
   padding-left: 5px;
 }
 
-/* .image-container {
-  justify-content: flex-start;
-} */
 
 .image-container img {
   border-radius: 50%;
@@ -32,14 +29,6 @@
   height: auto;
 }
 
-/* .card-title {
-  text-align: center;
-} */
-
-/* .card-body {
-  display: flex;
-  align-items: flex-start;
-} */
 
 p.card-text {
   text-align: center;
