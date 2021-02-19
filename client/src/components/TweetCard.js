@@ -55,11 +55,8 @@ const TweetCard = ({ input, tweet }) => {
               {tweet.full_text}
               <div className='img-card'>
                 <a href={(tweetImage) ? tweetImage[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  {/* {(tweetImage) || null} */}
                   <img
-                    // src={tweetImage ? tweetImage[0].media_url : null}
                     src={hasImage()}
-                    // src={tweetImage[0].media_url || null}
                     alt=''
                     style={tweetImage ? imgStyle : null}
                   />
