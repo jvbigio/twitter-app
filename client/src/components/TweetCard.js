@@ -28,7 +28,7 @@ const TweetCard = ({ input, tweet }) => {
       <Card id='tweet-card'>
         <Card.Body>
           <Row as='div'>
-            <Col>
+            <Col className='d-flex flex-row'>
               <div className='image-container'>
                 <img
                   src={tweet.user.profile_image_url_https}
