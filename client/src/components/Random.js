@@ -3,6 +3,8 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
 import './Random.css'
+import Moment from 'react-moment'
+
 
 function Random () {
   return (
