@@ -11,9 +11,11 @@ import { BsDash } from 'react-icons/bs'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
+  // console.log(tweet.extended_entities)
+  // let tweetMedia
+
   const tweetMedia = tweet.entities.media
 
-  // check if img present
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : { display: 'none' }
 
   const imgStyle = {
@@ -54,7 +56,7 @@ const TweetCard = ({ input, tweet }) => {
             <Card.Text as='div'>
               {tweet.full_text}
               <div className='img-card'>
-                <a href={(tweetMedia) ? tweetMedia[0].expanded_url : {display: 'none' }} target='_blank' rel='noreferrer'>
+                <a href={(tweetMedia) ? tweetMedia[0].expanded_url : undefined} target='_blank' rel='noreferrer'>
                   <img
                     src={hasMedia()}
                     alt=''
