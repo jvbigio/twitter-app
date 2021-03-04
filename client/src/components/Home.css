@@ -1,6 +1,6 @@
 .home {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   height: 100vh;
   background: url('../images/wall.jpg') no-repeat center/cover;
@@ -64,6 +64,11 @@ h1 {
   text-shadow: 2px 2px whitesmoke;
 }
 
+.container {
+  display: flex;
+  height: 75vh;
+}
+
 .container h2 {
   margin-top: 40px;
   color: whitesmoke;
@@ -75,7 +80,11 @@ h1 {
 #img {
   display: flex;
   align-items: flex-end;
-  background: url('../images/chatting.png') no-repeat center/cover;
-  height: 60vh;
-  width: 80vw;
+  /* background: url('../images/homepage-img.png') no-repeat center/cover; */
+  background: url('../images/homepage-img.png') no-repeat center/cover;
+  height: 40%;
+  /* width: 100%; */
+  max-width: 100%;
+  /* max-height: 50%; */
+  /* object-fit: scale-down; */
 }
