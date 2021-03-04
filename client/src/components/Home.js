@@ -7,7 +7,10 @@ function Home () {
       {/* <div className='home-card module'>
         <h1> An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h1>
       </div> */}
-      {/* <h2>An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h2> */}
+      <div className='container'>
+        <h2>An app that allows users to read or search tweets, and also generate random ones from your favorite users.</h2>
+        <div className='img' id='img' />
+      </div>
     </div>
   )
 }

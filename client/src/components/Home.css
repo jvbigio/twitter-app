@@ -63,3 +63,19 @@ h1 {
   font-family: 'Rock Salt', cursive;
   text-shadow: 2px 2px whitesmoke;
 }
+
+.container h2 {
+  margin-top: 40px;
+  color: whitesmoke;
+  text-align: center;
+  font-weight: 800;
+   text-shadow: 2px 2px 4px #000000;
+}
+
+#img {
+  display: flex;
+  align-items: flex-end;
+  background: url('../images/chatting.png') no-repeat center/cover;
+  height: 60vh;
+  width: 80vw;
+}
