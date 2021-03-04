@@ -11,11 +11,10 @@ import { BsDash } from 'react-icons/bs'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
+  const tweetMedia = tweet.entities.media
   // console.log(tweet.extended_entities)
 
-  const tweetMedia = tweet.entities.media
-
-  const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : { display: 'none' }
+  const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
   const imgStyle = {
     width: 'auto',
