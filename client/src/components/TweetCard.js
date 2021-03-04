@@ -13,7 +13,6 @@ import Moment from 'react-moment'
 const TweetCard = ({ input, tweet }) => {
   const tweetImage = tweet.entities.media
 
-  // check if img present
   const hasImage = () => tweetImage ? tweetImage[0].media_url : null
 
   const imgStyle = {
