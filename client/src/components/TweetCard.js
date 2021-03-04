@@ -12,7 +12,6 @@ import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
   // console.log(tweet.extended_entities)
-  // let tweetMedia
 
   const tweetMedia = tweet.entities.media
 
