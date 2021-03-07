@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-// import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -11,20 +10,9 @@ import { BsDash } from 'react-icons/bs'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
-  // orig:
   const tweetMedia = tweet.entities.media
-  // const tweetMedia = tweet.extended_entities.media[0]
-  // console.log(tweet.extended_entities.media)
-
-  // console.log(tweet.extended_entities.media[0].type)
-  // console.log(tweet.extended_entities.media[0].type)
-
-  // orig
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
-  // const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
-
   const http = tweet.full_text.indexOf('http')
-  // tweet.full_text = tweet.full_text.substr(0, http)
 
   const imgStyle = {
     width: 'auto',
@@ -62,7 +50,6 @@ const TweetCard = ({ input, tweet }) => {
         <Card.Body>
           <div>
             <Card.Text as='div'>
-              {/* {tweet.full_text} */}
               {tweet.full_text.substr(0, http)}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
