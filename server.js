@@ -70,8 +70,8 @@ app.get('/api/tweets/username', async (req, res) => {
       screen_name: req.query.username,
       count: 10,
       tweet_mode: 'extended',
-      exclude_replies: true
-      // include_rts: false
+      exclude_replies: true,
+      include_rts: false
     }
   }
   // GET request to Twitter:
