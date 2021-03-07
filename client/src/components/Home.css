@@ -67,24 +67,32 @@ h1 {
 .container {
   display: flex;
   height: 75vh;
+  
 }
 
 .container h2 {
   margin-top: 40px;
   color: whitesmoke;
   text-align: center;
-  font-weight: 800;
-   text-shadow: 2px 2px 4px #000000;
+  font-weight: 900;
+   /* text-shadow: 2px 2px 4px #000000; */
+   -webkit-filter: drop-shadow(5px 5px 5px #222);
+   filter: drop-shadow(5px 5px 5px #222);
+   font-size: 60px;
 }
 
-#img {
+/* #img {
   display: flex;
   align-items: flex-end;
-  /* background: url('../images/homepage-img.png') no-repeat center/cover; */
   background: url('../images/homepage-img.png') no-repeat center/cover;
   height: 40%;
-  /* width: 100%; */
+  width: 55%;
   max-width: 100%;
-  /* max-height: 50%; */
-  /* object-fit: scale-down; */
+  max-height: 50%;
+  object-fit: scale-down;
+} */
+
+.shadowed {
+   -webkit-filter: drop-shadow(5px 5px 5px #222);
+   filter: drop-shadow(5px 5px 5px #222);
 }
