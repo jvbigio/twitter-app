@@ -45,7 +45,7 @@ function Search () {
             className='mb-2 mr-sm-2'
             type='radio'
             id='search-content'
-            label='By content'
+            label='Content'
             value='content'
             onChange={(e) => handleRadioBtn(e)}
             checked={radioButton.selected === 'content'}
@@ -54,7 +54,7 @@ function Search () {
             className='mb-2 mr-sm-2'
             type='radio'
             id='search-username'
-            label='By username'
+            label='Username'
             value='username'
             onChange={(e) => handleRadioBtn(e)}
             checked={radioButton.selected === 'username'}
