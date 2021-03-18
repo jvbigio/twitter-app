@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { BsDash } from 'react-icons/bs'
-
+import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
@@ -50,14 +50,16 @@ const TweetCard = ({ input, tweet }) => {
         <Card.Body>
           <div>
             <Card.Text as='div'>
-              {tweet.full_text.substr(0, http)}
+              {/* {tweet.full_text.substr(0, http)} */}
+              {tweet.full_text.substr(0, tweet.display_text_range[1])}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  <img
+                  {/* <img
                     src={hasMedia()}
                     alt=''
                     style={tweetMedia ? imgStyle : null}
-                  />
+                  /> */}
+                  <Image src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
                 </a>
               </div>
             </Card.Text>
