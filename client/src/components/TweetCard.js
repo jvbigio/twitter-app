@@ -12,7 +12,7 @@ import Moment from 'react-moment'
 const TweetCard = ({ input, tweet }) => {
   const tweetMedia = tweet.entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
-  const http = tweet.full_text.indexOf('http')
+  // const http = tweet.full_text.indexOf('http')
 
   const imgStyle = {
     width: 'auto',
