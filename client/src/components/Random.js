@@ -5,7 +5,6 @@ import avatar from '../images/popeye.jpg'
 import './Random.css'
 import Moment from 'react-moment'
 
-
 function Random () {
   return (
     <CardDeck id='card-container'>
