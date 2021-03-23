@@ -12,7 +12,6 @@ import Moment from 'react-moment'
 const TweetCard = ({ input, tweet }) => {
   const tweetMedia = tweet.entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
-  // const http = tweet.full_text.indexOf('http')
 
   const imgStyle = {
     width: 'auto',
@@ -50,15 +49,9 @@ const TweetCard = ({ input, tweet }) => {
         <Card.Body>
           <div>
             <Card.Text as='div'>
-              {/* {tweet.full_text.substr(0, http)} */}
               {tweet.full_text.substr(0, tweet.display_text_range[1])}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  {/* <img
-                    src={hasMedia()}
-                    alt=''
-                    style={tweetMedia ? imgStyle : null}
-                  /> */}
                   <Image src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
                 </a>
               </div>
