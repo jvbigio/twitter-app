@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import avatar from '../images/popeye.jpg'
@@ -6,6 +6,14 @@ import './Random.css'
 import Moment from 'react-moment'
 
 function Random () {
+  const [twitterUsers, setTwitterUsers] = useState([
+    { name: 'Steve Maxwell', imageSrc: steveMaxwell },
+    { name: 'Andy Sterkowitz', imageSrc: andySterks },
+    { name: 'Gary Vaynerchuk', imageSrc: garyV },
+    { name: 'Joe Rogan', imageSrc: joeRogan },
+    { name: 'Traversy Media', imageSrc: bradTraversy }
+  ])
+
   return (
     <CardDeck id='card-container'>
       <Card className='random-card'>
