@@ -18,7 +18,7 @@ function Random () {
   ])
 
   const handleClick = e => {
-    console.log('clicked')
+    console.log(e.target)
   }
 
   const renderTwitterCards = twitterUsers.map(user => {
