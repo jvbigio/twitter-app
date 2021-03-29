@@ -18,7 +18,9 @@ function Random () {
   ])
 
   return (
-    <div>
+    // <div id='container' className='d-flex flex-row'>
+    // <div id='card-container'>
+    <div className='card-container'>
       <RandomCard
         name={twitterUsers[0].name}
         imageSrc={twitterUsers[0].imageSrc}

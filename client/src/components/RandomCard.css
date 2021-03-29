@@ -1,15 +1,23 @@
 #card-container {
   display: flex;
-  justify-content: center;
+  /* orig: */
+  /* justify-content: center; */
   align-items: center;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  /* end of orig */
+  /* Testing: */
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .random-card {
+  display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-direction: row; */
 }
 
 

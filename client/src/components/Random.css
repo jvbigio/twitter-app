@@ -21,3 +21,11 @@
   text-align: center;
   width: 100%;
 } */
+
+/* TEST: */
+/* #card-container { */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;h
+}
