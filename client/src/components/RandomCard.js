@@ -7,6 +7,7 @@ export default function RandomCard (props) {
 
   return (
     <div id='card-container'>
+      {/* <Card className='random-card' id='card-container'> */}
       <Card className='random-card'>
         <img className='avatar rounded-circle mr-3' src={props.imageSrc} alt='avatar' height='50px' width='50px' />
         <Card.Body>
