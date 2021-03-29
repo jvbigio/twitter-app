@@ -17,30 +17,39 @@ function Random () {
     { name: 'Steve Maxwell', imageSrc: steveMaxwell }
   ])
 
+  // map twitterUsers
+  const renderTwitterData = twitterUsers.map(user => {
+    return <RandomCard key={user.name} name={user.name} imageSrc={user.imageSrc} />
+  })
+
   return (
     // <div id='container' className='d-flex flex-row'>
     // <div id='card-container'>
+    // use this:
+    // <div className='card-container'>
+    //   <RandomCard
+    //     name={twitterUsers[0].name}
+    //     imageSrc={twitterUsers[0].imageSrc}
+    //   />
+    //   <RandomCard
+    //     name={twitterUsers[1].name}
+    //     imageSrc={twitterUsers[1].imageSrc}
+    //   />
+    //   <RandomCard
+    //     name={twitterUsers[2].name}
+    //     imageSrc={twitterUsers[2].imageSrc}
+    //   />
+    //   <RandomCard
+    //     name={twitterUsers[3].name}
+    //     imageSrc={twitterUsers[3].imageSrc}
+    //   />
+    //   <RandomCard
+    //     name={twitterUsers[4].name}
+    //     imageSrc={twitterUsers[4].imageSrc}
+    //   />
+    // </div>
     <div className='card-container'>
-      <RandomCard
-        name={twitterUsers[0].name}
-        imageSrc={twitterUsers[0].imageSrc}
-      />
-      <RandomCard
-        name={twitterUsers[1].name}
-        imageSrc={twitterUsers[1].imageSrc}
-      />
-      <RandomCard
-        name={twitterUsers[2].name}
-        imageSrc={twitterUsers[2].imageSrc}
-      />
-      <RandomCard
-        name={twitterUsers[3].name}
-        imageSrc={twitterUsers[3].imageSrc}
-      />
-      <RandomCard
-        name={twitterUsers[4].name}
-        imageSrc={twitterUsers[4].imageSrc}
-      />
+      {renderTwitterData}
     </div>
   )
 }
