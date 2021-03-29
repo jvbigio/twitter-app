@@ -17,15 +17,11 @@ function Random () {
     { name: 'Steve Maxwell', imageSrc: steveMaxwell }
   ])
 
-  // map twitterUsers
   const renderTwitterData = twitterUsers.map(user => {
     return <RandomCard key={user.name} name={user.name} imageSrc={user.imageSrc} />
   })
 
   return (
-    // <div id='container' className='d-flex flex-row'>
-    // <div id='card-container'>
-    // use this:
     // <div className='card-container'>
     //   <RandomCard
     //     name={twitterUsers[0].name}
