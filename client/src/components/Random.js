@@ -19,7 +19,26 @@ function Random () {
 
   return (
     <div>
-      <RandomCard name={twitterUsers[0].name} imageSrc={twitterUsers[0].imageSrc} />
+      <RandomCard
+        name={twitterUsers[0].name}
+        imageSrc={twitterUsers[0].imageSrc}
+      />
+      <RandomCard
+        name={twitterUsers[1].name}
+        imageSrc={twitterUsers[1].imageSrc}
+      />
+      <RandomCard
+        name={twitterUsers[2].name}
+        imageSrc={twitterUsers[2].imageSrc}
+      />
+      <RandomCard
+        name={twitterUsers[3].name}
+        imageSrc={twitterUsers[3].imageSrc}
+      />
+      <RandomCard
+        name={twitterUsers[4].name}
+        imageSrc={twitterUsers[4].imageSrc}
+      />
     </div>
   )
 }

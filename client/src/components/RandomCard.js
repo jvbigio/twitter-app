@@ -1,4 +1,5 @@
 import React from 'react'
+import './RandomCard.css'
 import Card from 'react-bootstrap/Card'
 
 export default function RandomCard (props) {
