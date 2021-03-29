@@ -17,8 +17,19 @@ function Random () {
     { name: 'Steve Maxwell', imageSrc: steveMaxwell }
   ])
 
+  const handleClick = e => {
+    console.log('clicked')
+  }
+
   const renderTwitterCards = twitterUsers.map(user => {
-    return <RandomCard key={user.name} name={user.name} imageSrc={user.imageSrc} />
+    return (
+      <RandomCard
+        key={user.name}
+        name={user.name}
+        imageSrc={user.imageSrc}
+        handleClick={handleClick}
+      />
+    )
   })
 
   return (
