@@ -10,7 +10,7 @@ import steveMaxwell from '../images/steveMaxwell.jpeg'
 
 function Random () {
   const [twitterUsers, setTwitterUsers] = useState([
-    { name: 'Andy Sterkowitz', imageSrc: andySterks },
+    { id: 1, name: 'Andy Sterkowitz', imageSrc: andySterks },
     { name: 'Brad Traversy', imageSrc: bradTraversy },
     { name: 'Gary Vaynerchuk', imageSrc: garyV },
     { name: 'Joe Rogan', imageSrc: joeRogan },
@@ -18,15 +18,24 @@ function Random () {
   ])
 
   const handleClick = e => {
-    console.log(e.target)
+    // console.log(e.target)
+    // console.log(twitterUsers.id)
+    console.log(twitterUsers)
+    // console.log(e.target.value)
   }
 
-  const renderTwitterCards = twitterUsers.map(user => {
+  // orig key={user.name}
+
+  const renderTwitterCards = twitterUsers.map((user, index) => {
+    // console.log(index) // works
+    // console.log(user) // works
+    // console.log(user.id) // works
     return (
       <RandomCard
-        key={user.name}
+        key={index}
         name={user.name}
         imageSrc={user.imageSrc}
+        value={user.id}
         handleClick={handleClick}
       />
     )
