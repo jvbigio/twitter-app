@@ -18,22 +18,10 @@ function Random () {
   ])
 
   const handleClick = e => {
-    // console.log(e.target)
-    // console.log(twitterUsers.id)
-    // console.log(twitterUsers[0])
-    // console.log(twitterUsers[1])
-    // console.log(twitterUsers[2])
-    // console.log(twitterUsers[3])
-    // console.log(twitterUsers[4])
-    console.log(e.target.textContent) // works
+    console.log(e.target.textContent)
   }
 
-  // orig key={user.name}
-
   const renderTwitterCards = twitterUsers.map((user, index) => {
-    // console.log(index) // works
-    // console.log(user) // works
-    // console.log(user.id) // works
     return (
       <RandomCard
         key={index}
