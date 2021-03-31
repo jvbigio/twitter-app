@@ -10,18 +10,22 @@ import steveMaxwell from '../images/steveMaxwell.jpeg'
 
 function Random () {
   const [twitterUsers, setTwitterUsers] = useState([
-    { id: 1, name: 'Andy Sterkowitz', imageSrc: andySterks },
-    { name: 'Brad Traversy', imageSrc: bradTraversy },
-    { name: 'Gary Vaynerchuk', imageSrc: garyV },
-    { name: 'Joe Rogan', imageSrc: joeRogan },
-    { name: 'Steve Maxwell', imageSrc: steveMaxwell }
+    { id: 1, name: 'Andy Sterkowitz', username: 'andysterks', imageSrc: andySterks },
+    { id: 2, name: 'Brad Traversy', username: 'traversymedia', imageSrc: bradTraversy },
+    { id: 3, name: 'Gary Vaynerchuk', username: 'garyvee', imageSrc: garyV },
+    { id: 4, name: 'Joe Rogan', username: 'joerogan', imageSrc: joeRogan },
+    { id: 5, name: 'Steve Maxwell', username: 'stevemaxwellsc', imageSrc: steveMaxwell }
   ])
 
   const handleClick = e => {
     // console.log(e.target)
     // console.log(twitterUsers.id)
-    console.log(twitterUsers)
-    // console.log(e.target.value)
+    // console.log(twitterUsers[0])
+    // console.log(twitterUsers[1])
+    // console.log(twitterUsers[2])
+    // console.log(twitterUsers[3])
+    // console.log(twitterUsers[4])
+    console.log(e.target.textContent) // works
   }
 
   // orig key={user.name}
