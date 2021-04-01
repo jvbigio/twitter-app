@@ -83,6 +83,12 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
+app.get('api/tweets/random', async (req, res) => {
+  // get tweets by user id
+  // get a single random tweet
+  // return single random tweet
+})
+
 // by username?
 // app.get('/api/tweets/username/:username', (req, res) => {
 //   const user = twitterUsers.find(handle => handle.username === req.params.username)
