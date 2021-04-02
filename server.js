@@ -83,6 +83,7 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
+// returns back a single tweet, compared to an array of tweets above:
 app.get('api/tweets/random', async (req, res) => {
   // get tweets by user id
   // get a single random tweet
