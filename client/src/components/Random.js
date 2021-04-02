@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Random.css'
 import RandomCard from './RandomCard'
+import axios from 'axios'
 
 import andySterks from '../images/andySterks.jpg'
 import bradTraversy from '../images/bradTraversy.jpg'
@@ -17,8 +18,14 @@ function Random () {
     { id: 5, name: 'Steve Maxwell', username: 'stevemaxwellsc', imageSrc: steveMaxwell }
   ])
 
-  const handleClick = username => {
+  const handleClick = async (username) => {
     console.log(username)
+    const userUrl = `/api/tweets/random?username=${username}`
+
+    axios
+      .get(userUrl)
+      .then(response => setTwitterUsers(response.data))
+      .catch(err => console.error(err))
   }
 
   const renderTwitterCards = twitterUsers.map((user, index) => {
