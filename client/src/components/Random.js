@@ -27,6 +27,7 @@ function Random () {
       .then(response => setTwitterUsers(response.data))
       .catch(err => console.error(err))
   }
+
   // console.log(twitterUsers) // returns all twitterUsers
 
   const renderTwitterCards = twitterUsers.map((user, index) => {
