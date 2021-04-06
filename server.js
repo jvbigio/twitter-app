@@ -81,7 +81,6 @@ app.get('/api/tweets/username', async (req, res) => {
       console.error(error)
       res.sendStatus(500).send(error)
     })
-  console.log(response.data)
 })
 
 // returns back a single tweet, compared to an array of tweets above:
@@ -111,6 +110,7 @@ app.get('api/tweets/random', async (req, res) => {
       console.error(error)
       res.sendStatus(500).send(error)
     })
+  // console.log(response.data) // TEST
 })
 
 // by username?
