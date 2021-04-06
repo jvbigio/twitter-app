@@ -22,12 +22,10 @@ function Random () {
   const [randomTweet, setRandomTweet] = useState([])
 
   const handleClick = async (username) => {
-    console.log(username)
     const userUrl = `/api/tweets/random?username=${username}`
 
     axios
       .get(userUrl)
-      // .then(response => setTwitterUsers(response.data)) // orig
       .then(response => setRandomTweet(response.data))
       .catch(err => console.error(err))
   }

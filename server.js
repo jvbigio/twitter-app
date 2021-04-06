@@ -56,7 +56,6 @@ app.get('/api/tweets/content', async (req, res) => {
       res.sendStatus(500).send(error)
     })
 })
-// works in postman: https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=garyvee
 
 app.get('/api/tweets/username', async (req, res) => {
   const token = await getAccessToken()
@@ -110,7 +109,6 @@ app.get('/api/tweets/random', async (req, res) => {
       console.error(error)
       res.sendStatus(500).send(error)
     })
-  // console.log(response.data) // TEST
 })
 
 // by username?
