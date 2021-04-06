@@ -1,16 +1,19 @@
 import React from 'react'
 import './Home.css'
-import Image from 'react-bootstrap/Image'
-import chatBots from '../images/chatBots.png'
 
 function Home () {
   return (
-    <div className='home'>
-      <div className='container'>
-        <h2>An app that allows users to read or search tweets and also generate random ones from your favorite users.</h2>
-        <Image className='shadowed' src={chatBots} fluid />
+    <section id='container'>
+      <div id='left-half' />
+      <div id='right-half'>
+        <div id='intro'>
+          {/* <h1>An app that allows users to read or search tweets and also generate random ones from your favorite users.</h1> */}
+          <h1>An app that allows you to read tweets by searching a Twitter user by username or search Twitter by topic. <br /><br />
+            Users may also generate a random Tweet from their favorite Twitter users.
+          </h1>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
