@@ -34,6 +34,8 @@ function Random () {
   console.log(randomTweet)
   // console.log(twitterUsers) // returns all twitterUsers
 
+  const renderRandomTweet = randomTweet.map(tweet => console.log(tweet))
+
   const renderTwitterCards = twitterUsers.map(user => {
     return (
       <RandomCard
@@ -49,6 +51,7 @@ function Random () {
   return (
     <div className='card-container'>
       {renderTwitterCards}
+      {renderRandomTweet}
     </div>
   )
 }
