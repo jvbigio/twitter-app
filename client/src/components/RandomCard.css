@@ -1,13 +1,9 @@
 #card-container {
   display: flex;
-  /* orig: */
-  /* justify-content: center; */
   align-items: center;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  /* end of orig */
-  /* Testing: */
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,17 +15,19 @@
   align-items: center;
   width: 200px;
   cursor: pointer;
-  /* flex-wrap: wrap; */
-  /* flex-direction: row; */
 }
 
 
 .avatar {
   margin-top: 20px;
-  /* justify-content: center; */
 }
 
-/* .card-footer {
-  text-align: center;
-  width: 100%;
+/* new */
+/* #card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 } */

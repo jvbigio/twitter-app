@@ -8,6 +8,7 @@ import bradTraversy from '../images/bradTraversy.jpg'
 import garyV from '../images/garyV.jpg'
 import joeRogan from '../images/joeRogan.jpeg'
 import steveMaxwell from '../images/steveMaxwell.jpeg'
+import TweetCard from './TweetCard'
 
 function Random () {
   const [twitterUsers, setTwitterUsers] = useState([
@@ -31,10 +32,9 @@ function Random () {
       .catch(err => console.error(err))
   }
 
-  console.log(randomTweet)
-  // console.log(twitterUsers) // returns all twitterUsers
-
-  const renderRandomTweet = randomTweet.map(tweet => console.log(tweet))
+  const renderRandomTweet = randomTweet.map(tweet => {
+    return <TweetCard key={tweet.id} tweet={tweet} />
+  })
 
   const renderTwitterCards = twitterUsers.map(user => {
     return (
@@ -49,9 +49,13 @@ function Random () {
   })
 
   return (
-    <div className='card-container'>
-      {renderTwitterCards}
-      {renderRandomTweet}
+    <div>
+      <div className='card-container'>
+        {renderTwitterCards}
+      </div>
+      <div className='random-tweet'>
+        {renderRandomTweet}
+      </div>
     </div>
   )
 }
