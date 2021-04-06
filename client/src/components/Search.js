@@ -8,7 +8,6 @@ import axios from 'axios'
 function Search () {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
-  const [user, setUser] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
 
   const handleRadioBtn = (e) => {

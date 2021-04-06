@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import './TweetCard.css'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { BsDash } from 'react-icons/bs'
+import { FaRetweet, FaRegComment, FaRegHeart } from 'react-icons/fa'
 import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
@@ -58,10 +59,10 @@ const TweetCard = ({ input, tweet }) => {
             </Card.Text>
           </div>
         </Card.Body>
-        <Card.Footer className='d-flex justify-content-around rounded-bottom'>
-          <i className='far fa-comment'> {tweet.display_text_range[1]}</i>
-          <i className='fas fa-retweet'> {tweet.retweet_count}</i>
-          <i className='far fa-heart'> {tweet.favorite_count}</i>
+        <Card.Footer id='footer-icons' className='d-flex justify-content-around rounded-bottom'>
+          <div id='comment'><FaRegComment /> &nbsp; {tweet.display_text_range[1]} </div>
+          <div id='retweet'><FaRetweet /> &nbsp; {tweet.retweet_count}</div>
+          <div id='heart'><FaRegHeart /> &nbsp; {tweet.favorite_count}</div>
         </Card.Footer>
       </Card>
     </Container>

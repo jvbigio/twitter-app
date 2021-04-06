@@ -56,7 +56,6 @@ app.get('/api/tweets/content', async (req, res) => {
       res.sendStatus(500).send(error)
     })
 })
-// works in postman: https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=garyvee
 
 app.get('/api/tweets/username', async (req, res) => {
   const token = await getAccessToken()
@@ -69,6 +68,35 @@ app.get('/api/tweets/username', async (req, res) => {
     params: {
       screen_name: req.query.username,
       count: 10,
+      tweet_mode: 'extended',
+      exclude_replies: true,
+      include_rts: false
+    }
+  }
+  // GET request to Twitter:
+  axios.get(URL, config)
+    .then(response => res.send(response.data))
+    .catch(error => {
+      console.error(error)
+      res.sendStatus(500).send(error)
+    })
+})
+
+// returns back a single tweet, compared to an array of tweets above:
+app.get('/api/tweets/random', async (req, res) => {
+  // get tweets by user id
+  // get a single random tweet
+  // return single random tweet
+  const token = await getAccessToken()
+  const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      screen_name: req.query.username,
+      count: 1,
       tweet_mode: 'extended',
       exclude_replies: true,
       include_rts: false
