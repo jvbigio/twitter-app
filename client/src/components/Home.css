@@ -27,8 +27,16 @@
   justify-items: center;
 }
 
+.title {
+  display: none;
+}
+
 h1 {
   padding: 20px;
+}
+
+.img-fluid {
+  display: none;
 }
 
 @media screen and (max-width: 640px) {
@@ -43,10 +51,26 @@ h1 {
   #right-half {
     height: 50vh;
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   #left-half {
     height: 50vh;
     width: 100%;
+  }
+  #intro {
+    flex-direction: column;
+  }
+  .title {
+    display: block;
+  }
+  #intro .title {
+     font-weight: 900;
+     font-size: 2.5rem;
+  }
+  .img-fluid {
+    color: whitesmoke;
+    display: block;
   }
 }
 
