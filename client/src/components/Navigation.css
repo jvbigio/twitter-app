@@ -47,8 +47,8 @@
   color: whitesmoke;
 }
 
-@media(max-width: 768px) {
-  #topnav {
+@media(max-width: 640px) {
+  #topNav {
     flex-direction: column;
   }
   .header-title {
