@@ -55,13 +55,3 @@ p.card-text {
   display: flex;
   align-items: center;
 }
-
-/* Media Queries */
-
-/* @media(max-width: 576px) {
-  .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-} */

@@ -14,9 +14,6 @@ function Home () {
             Users may also generate a random Tweet from their favorite Twitter users.
             <Image src={logo} fluid />
           </h1>
-          <div className='logo'>
-            {/* <Image src={logo} fluid style={{ display: 'none' }} /> */}
-          </div>
         </div>
       </div>
     </section>
