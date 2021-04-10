@@ -4,7 +4,7 @@ import './Navigation.css'
 
 function Navigation () {
   return (
-    <nav className='top-nav' id='topNav'>
+    <nav className='top-nav' id='top-nav'>
       <div className='pages'>
         <NavLink exact to='/' activeClassName='active'>Home</NavLink>
         <NavLink to='/search' activeClassName='active'>Search</NavLink>

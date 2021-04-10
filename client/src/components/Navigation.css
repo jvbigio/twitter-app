@@ -30,8 +30,9 @@
   color: whitesmoke;
 }
 
-@media(max-width: 640px) {
-  .top-nav {
+@media screen and (max-width: 640px) {
+  .pages {
+    display: flex;
     flex-direction: column;
   }
   .header-title {

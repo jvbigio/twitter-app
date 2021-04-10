@@ -45,3 +45,25 @@ button:active {
   outline: none !important;
   box-shadow: none !important;
 }
+
+@media screen and (max-width: 640px) {
+  .form-container form {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .search-box .form-check {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  } */
+  /* .search-box #search-content {
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+  } */
+  /* .form-check, #search-content, #search-username {
+    flex-direction: row;
+    justify-content: space-between;
+  } */
+}
