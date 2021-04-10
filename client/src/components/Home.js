@@ -12,7 +12,7 @@ function Home () {
           <h1 className='title'>Yapper</h1>
           <h1>An app that allows you to read tweets by searching a Twitter user by username or search Twitter by topic. <br /><br />
             Users may also generate a random Tweet from their favorite Twitter users.
-            <Image src={logo} fluid />
+            <Image className='logo' src={logo} fluid />
           </h1>
         </div>
       </div>
