@@ -38,26 +38,28 @@ function Search () {
 
   return (
     <div className='container'>
-      <div className='form-container'>
+      <div className='form-container flex-container'>
         <Form onSubmit={handleSearch} inline className='search-box' autoComplete='off'>
-          <Form.Check
-            className='mb-2 mr-sm-2'
-            type='radio'
-            id='search-content'
-            label='Content'
-            value='content'
-            onChange={(e) => handleRadioBtn(e)}
-            checked={radioButton.selected === 'content'}
-          />
-          <Form.Check
-            className='mb-2 mr-sm-2'
-            type='radio'
-            id='search-username'
-            label='Username'
-            value='username'
-            onChange={(e) => handleRadioBtn(e)}
-            checked={radioButton.selected === 'username'}
-          />
+          <div className='flex-container inline'>
+            <Form.Check
+              className='mb-2 mr-sm-2'
+              type='radio'
+              id='search-content'
+              label='Content'
+              value='content'
+              onChange={(e) => handleRadioBtn(e)}
+              checked={radioButton.selected === 'content'}
+            />
+            <Form.Check
+              className='mb-2 mr-sm-2'
+              type='radio'
+              id='search-username'
+              label='Username'
+              value='username'
+              onChange={(e) => handleRadioBtn(e)}
+              checked={radioButton.selected === 'username'}
+            />
+          </div>
           <Form.Group controlId='search'>
             <Form.Control
               type='text'
