@@ -1,6 +1,13 @@
 .container-fluid {
   display: flex;
   justify-content: center;
+  /* no effect */
+  box-shadow: (0px 5px 25px 5px #222);
+}
+
+/* no effect */
+.card {
+  box-shadow: (0px 5px 25px 5px #222);
 }
 
 #tweet-card {
@@ -11,14 +18,8 @@
   height: 30%;
   width: 50%;
   border-radius: 10px;
-  /* Keep? */
-  /* -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222); */
-  box-shadow: 0px 5px 25px 10px rgba(0, 0, 0, .25);
-  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, .25);
-  /* Keep: */
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-  box-shadow: (0px 5px 15px 5px #222);
+  /* no effect */
+  box-shadow: (0px 5px 25px 5px #222);
 }
 
 .row {
@@ -35,7 +36,6 @@
 
 p.card-text {
   text-align: center;
-  /* overflow: hidden; */
 }
 
 .name {

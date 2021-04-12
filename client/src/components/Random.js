@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Random.css'
+import TweetCard from './TweetCard'
 import RandomCard from './RandomCard'
 import axios from 'axios'
 
@@ -8,7 +9,6 @@ import bradTraversy from '../images/bradTraversy.jpg'
 import garyV from '../images/garyV.jpg'
 import joeRogan from '../images/joeRogan.jpeg'
 import steveMaxwell from '../images/steveMaxwell.jpeg'
-import TweetCard from './TweetCard'
 
 function Random () {
   const [twitterUsers, setTwitterUsers] = useState([
@@ -48,10 +48,10 @@ function Random () {
 
   return (
     <div>
-      <div className='card-container' id='fav-cards'>
+      <div className='card-container'>
         {renderTwitterCards}
       </div>
-      <div className='random-tweet'>
+      <div id='random-tweet'>
         {renderRandomTweet}
       </div>
     </div>

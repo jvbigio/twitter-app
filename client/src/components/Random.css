@@ -3,22 +3,10 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.random-tweet {
-  /* Keep: */
-  /* box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, .25);
-  box-shadow: 0px 5px 25px 10px rgba(0, 0, 0, .25); */
-  /* -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222); */
+  /* no effect */
   box-shadow: (0px 5px 15px 5px #222);
 }
 
-/* @media screen and (max-width: 640px) {
-  .random-card {
-    border-radius: 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-} */
+#random-tweet {
+  box-shadow: (0px 5px 15px 5px #222);
+}
