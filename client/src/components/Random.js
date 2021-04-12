@@ -48,7 +48,7 @@ function Random () {
 
   return (
     <div>
-      <div className='card-container'>
+      <div className='card-container' id='fav-cards'>
         {renderTwitterCards}
       </div>
       <div className='random-tweet'>
