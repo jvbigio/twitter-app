@@ -3,12 +3,5 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* no effect */
-  box-shadow: (0px 5px 15px 5px #222);
 }
 
-#random-tweet {
-  /* -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222); */
-  box-shadow: (0px 5px 15px 5px #222);
-}
