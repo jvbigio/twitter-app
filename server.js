@@ -47,8 +47,6 @@ app.get('/api/tweets/content', async (req, res) => {
       tweet_mode: 'extended'
     }
   }
-
-  // Retrieve data from Twitter
   axios.get(URL, config)
     .then(response => res.send(response.data.statuses))
     .catch(error => {
