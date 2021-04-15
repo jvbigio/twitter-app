@@ -14,6 +14,8 @@ const TweetCard = ({ input, tweet }) => {
   const tweetMedia = tweet.extended_entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
+  console.log(tweetMedia[0].type)
+
   const imgStyle = {
     width: 'auto',
     Height: 'auto',
