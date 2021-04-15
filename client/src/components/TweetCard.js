@@ -11,7 +11,7 @@ import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
-  const tweetMedia = tweet.entities.media
+  const tweetMedia = tweet.extended_entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
   const imgStyle = {
