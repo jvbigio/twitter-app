@@ -11,7 +11,9 @@ import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
-  const tweetMedia = tweet.extended_entities.media
+  const tweetMedia = tweet.entities.media // orig
+
+  // const tweetMedia = tweet.extended_entities.media // change to extended_entities (search/random no longer works)
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
   console.log(tweetMedia[0].type)
