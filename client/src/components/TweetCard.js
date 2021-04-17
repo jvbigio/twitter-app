@@ -12,11 +12,13 @@ import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
   const tweetMedia = tweet.entities.media // orig
+  // const tweetMedia = tweet.extended_entities.media
+  // const tweetMedia = tweet.extended_entities
 
-  // const tweetMedia = tweet.extended_entities.media // change to extended_entities (search/random no longer works)
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
-  console.log(tweetMedia[0].type)
+  // console.log(tweetMedia[0].type)
+  // console.log(tweet.extended_entities)
 
   const imgStyle = {
     width: 'auto',
@@ -57,7 +59,7 @@ const TweetCard = ({ input, tweet }) => {
               {tweet.full_text.substr(0, tweet.display_text_range[1])}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  <Image src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
+                  <Image className='tweet-image' src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
                 </a>
               </div>
             </Card.Text>
