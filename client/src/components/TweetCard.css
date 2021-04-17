@@ -49,6 +49,14 @@ p.card-text {
   margin-top: 16px;
 }
 
+/* new */
+.tweet-image {
+  /* display: flex; */
+  /* min-height: 620px;
+  max-height: 640px;
+  height: 100%; */
+}
+
 #comment,
 #retweet,
 #heart {
