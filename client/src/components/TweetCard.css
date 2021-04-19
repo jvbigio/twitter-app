@@ -49,13 +49,21 @@ p.card-text {
   margin-top: 16px;
 }
 
-/* new */
-#tweet-image {
+/* TEST */
+/* .img-card img {
   display: flex;
-  /* justify-content: center; */
-  height: 640px;
+  max-height: 50%;
+  max-width: 90%;
+} */
+
+/* new */
+/* .tweet-image {
+  display: flex;
+  justify-content: center;
+  height: 764px;
   width: 90%;
-}
+
+} */
 
 #comment,
 #retweet,

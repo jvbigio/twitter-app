@@ -11,14 +11,23 @@ import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
-  const tweetMedia = tweet.entities.media // orig
+  // const tweetMedia = tweet.entities.media // orig
   // const tweetMedia = tweet.extended_entities.media
-  // const tweetMedia = tweet.extended_entities
+  const tweetMedia = tweet.extended_entities.media
 
-  const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
+  // keep - origin:
+  // const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
+  const hasMedia = () => {
+    // console.log(tweetMedia.type)
+    if (tweetMedia) {
+      console.log(tweetMedia[0])
+      // console.log(tweetMedia[0].type) // photo
+    }
+  }
 
-  // console.log(tweetMedia[0].type)
-  // console.log(tweet.extended_entities)
+  // console.log(tweetMedia[0].type) // works but throws error
+  // console.log(tweetMedia.type)
+  // console.log(tweet.extended_entities.media[0].type)
 
   const imgStyle = {
     width: 'auto',
@@ -59,7 +68,7 @@ const TweetCard = ({ input, tweet }) => {
               {tweet.full_text.substr(0, tweet.display_text_range[1])}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  <Image id='tweet-image' src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
+                  <Image className='tweet-image' src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
                 </a>
               </div>
             </Card.Text>
