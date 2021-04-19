@@ -59,7 +59,7 @@ const TweetCard = ({ input, tweet }) => {
               {tweet.full_text.substr(0, tweet.display_text_range[1])}
               <div className='img-card'>
                 <a href={(tweetMedia) ? tweetMedia[0].expanded_url : null} target='_blank' rel='noreferrer'>
-                  <Image className='tweet-image' src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
+                  <Image id='tweet-image' src={hasMedia()} style={tweetMedia ? imgStyle : null} fluid />
                 </a>
               </div>
             </Card.Text>

@@ -50,11 +50,12 @@ p.card-text {
 }
 
 /* new */
-.tweet-image {
+#tweet-image {
   /* display: flex; */
   /* min-height: 620px;
   max-height: 640px;
   height: 100%; */
+  height: 640;
 }
 
 #comment,

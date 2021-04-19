@@ -38,7 +38,7 @@ function Search () {
 
   return (
     <div className='container'>
-      <div className='form-container flex-container'>
+      <div className='form-container'>
         <Form onSubmit={handleSearch} inline className='search-box' autoComplete='off'>
           <div className='flex-container inline'>
             <Form.Check
