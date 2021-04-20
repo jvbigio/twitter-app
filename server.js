@@ -80,7 +80,7 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
-happ.get('/api/tweets/random', async (req, res) => {
+app.get('/api/tweets/random', async (req, res) => {
   const token = await getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 
