@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const express = require('express')
 const app = express()
 const path = require('path')
@@ -71,7 +70,6 @@ app.get('/api/tweets/username', async (req, res) => {
       include_rts: false
     }
   }
-  // GET request to Twitter:
   axios.get(URL, config)
     .then(response => res.send(response.data))
     .catch(error => {
@@ -96,7 +94,6 @@ app.get('/api/tweets/random', async (req, res) => {
       include_rts: false
     }
   }
-  // GET request to Twitter:
   axios.get(URL, config)
     .then(response => res.send(response.data))
     .catch(error => {
@@ -104,22 +101,3 @@ app.get('/api/tweets/random', async (req, res) => {
       res.sendStatus(500).send(error)
     })
 })
-
-// by username?
-// app.get('/api/tweets/username/:username', (req, res) => {
-//   const user = twitterUsers.find(handle => handle.username === req.params.username)
-
-//   if (!user) res.status(404).send('Username given does not exist!')
-//   res.send(twitterUsers)
-// })
-
-// app.get('/api/tweets/random', (req, res) => {
-//   res.send('random tweet')
-// })
-
-/*
-NOTES:
-Routing refers to how an application’s endpoints (URLs) respond to client requests.
-https://expressjs.com/en/guide/routing.html
-
-*/
