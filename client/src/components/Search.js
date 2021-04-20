@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
-import { Button } from 'react-bootstrap'
-import Form from 'react-bootstrap/Form'
 import TweetCard from './TweetCard'
 import './Search.css'
+
+import { Button } from 'react-bootstrap'
+import Form from 'react-bootstrap/Form'
+import Alert from 'react-bootstrap/Alert'
+
 import axios from 'axios'
 
 function Search () {
