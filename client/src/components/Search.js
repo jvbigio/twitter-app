@@ -12,6 +12,7 @@ function Search () {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
+  const errorMSG = ['warning']
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -26,6 +27,11 @@ function Search () {
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
+
+    // add warning if button clicked and input blank?
+    if (!input) {
+      // console.log('input blank') // works
+    }
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
@@ -73,6 +79,13 @@ function Search () {
           </Form.Group>
           <Button id='search-btn' variant='primary' type='submit'>Search</Button>
         </Form>
+      </div>
+      <div className='error-container'>
+        {errorMSG.map((variant, idx) => (
+          <Alert key={idx} variant={variant} style={{ display: 'none' }}>
+            Input field cannot be blank!
+          </Alert>
+        ))}
       </div>
       <div className='content-card'>
         <div className='wrapper'>
