@@ -58,7 +58,7 @@ p.card-text {
 
 @media screen and (max-width: 768px) {
   #tweet-card {
-    width: 80%;
+    width: 90%;
   }
 }
 
