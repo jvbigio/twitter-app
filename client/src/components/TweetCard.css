@@ -77,3 +77,9 @@ p.card-text {
     width: 80%;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .footer-icons {
+    font-size: 12px;
+  }
+}
