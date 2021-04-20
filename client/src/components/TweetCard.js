@@ -11,36 +11,10 @@ import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
 
 const TweetCard = ({ input, tweet }) => {
-  const tweetMedia = tweet.entities.media // orig
-  // const tweetMedia = tweet.extended_entities.media
-  // const tweetMedia = tweet.extended_entities.media
-
-  // keep - origin:
+  const tweetMedia = tweet.entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
-  // const hasMedia = () => {
-  //   // console.log(tweetMedia.type)
-  //   if (tweetMedia) {
-  //     console.log(tweetMedia[0])
-  //     // console.log(tweetMedia[0].type) // photo
-  //   }
-  // }
 
-  // console.log(tweetMedia[0].type) // works but throws error
-  // console.log(tweetMedia.type)
-  // console.log(tweet.extended_entities.media[0].type)
-
-  // orig
-  // const imgStyle = {
-  //   width: 'auto',
-  //   height: 'auto',
-  //   maxWidth: '100%',
-  //   borderRadius: '5%'
-  // }
-
-  // TEST:
   const imgStyle = {
-    // width: 'auto',
-    // maxWidth: '1024px',
     width: '100%',
     maxHeight: '382px',
     borderRadius: '5%'
