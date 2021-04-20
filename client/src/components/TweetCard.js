@@ -36,12 +36,12 @@ const TweetCard = ({ input, tweet }) => {
     maxWidth: '100%',
     borderRadius: '5%'
   }
+
+  // TEST:
   // const imgStyle = {
   //   width: 'auto',
-  //   height: '400px',
-  //   minHeight: '400px',
-  //   maxWidth: '100%',
-  //   minWidth: '100%',
+  //   maxWidth: '1024px',
+  //   maxHeight: '382px',
   //   borderRadius: '5%'
   // }
 

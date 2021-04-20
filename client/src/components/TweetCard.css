@@ -12,6 +12,13 @@
   width: 50%;
   border-radius: 10px;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
+  /* TEST: */
+  /* max-width: 1024px;
+  max-height: 900px; */
+  /* min-width: 720px;
+  min-height: 500px; */
+  /* width: fit-content;
+  height: fit-content; */
 }
 
 .row {
@@ -47,6 +54,8 @@ p.card-text {
   display: flex;
   justify-content: center;
   margin-top: 16px;
+  /* TEST */
+  width: 100%;
 }
 
 /* TEST */
