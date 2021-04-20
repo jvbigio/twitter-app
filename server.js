@@ -80,11 +80,7 @@ app.get('/api/tweets/username', async (req, res) => {
     })
 })
 
-// returns back a single tweet, compared to an array of tweets above:
-app.get('/api/tweets/random', async (req, res) => {
-  // get tweets by user id
-  // get a single random tweet
-  // return single random tweet
+happ.get('/api/tweets/random', async (req, res) => {
   const token = await getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 

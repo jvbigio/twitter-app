@@ -30,20 +30,21 @@ const TweetCard = ({ input, tweet }) => {
   // console.log(tweet.extended_entities.media[0].type)
 
   // orig
-  const imgStyle = {
-    width: 'auto',
-    height: 'auto',
-    maxWidth: '100%',
-    borderRadius: '5%'
-  }
-
-  // TEST:
   // const imgStyle = {
   //   width: 'auto',
-  //   maxWidth: '1024px',
-  //   maxHeight: '382px',
+  //   height: 'auto',
+  //   maxWidth: '100%',
   //   borderRadius: '5%'
   // }
+
+  // TEST:
+  const imgStyle = {
+    // width: 'auto',
+    // maxWidth: '1024px',
+    width: '100%',
+    maxHeight: '382px',
+    borderRadius: '5%'
+  }
 
   return (
     <Container fluid>
