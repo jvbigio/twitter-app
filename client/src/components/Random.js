@@ -37,7 +37,7 @@ function Random () {
   const renderTwitterCards = twitterUsers.map(user => {
     return (
       <RandomCard
-        key={user.id}
+        key={user.name}
         name={user.name}
         imageSrc={user.imageSrc}
         value={user.id}
