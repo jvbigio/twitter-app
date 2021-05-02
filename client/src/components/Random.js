@@ -12,11 +12,11 @@ import steveMaxwell from '../images/steveMaxwell.jpeg'
 
 function Random () {
   const [twitterUsers, setTwitterUsers] = useState([
-    { id: 1, name: 'Andy Sterkowitz', username: 'andysterks', imageSrc: andySterks },
-    { id: 2, name: 'Brad Traversy', username: 'traversymedia', imageSrc: bradTraversy },
-    { id: 3, name: 'Gary Vaynerchuk', username: 'garyvee', imageSrc: garyV },
-    { id: 4, name: 'Joe Rogan', username: 'joerogan', imageSrc: joeRogan },
-    { id: 5, name: 'Steve Maxwell', username: 'stevemaxwellsc', imageSrc: steveMaxwell }
+    { name: 'Andy Sterkowitz', username: 'andysterks', imageSrc: andySterks },
+    { name: 'Brad Traversy', username: 'traversymedia', imageSrc: bradTraversy },
+    { name: 'Gary Vaynerchuk', username: 'garyvee', imageSrc: garyV },
+    { name: 'Joe Rogan', username: 'joerogan', imageSrc: joeRogan },
+    { name: 'Steve Maxwell', username: 'stevemaxwellsc', imageSrc: steveMaxwell }
   ])
 
   const [randomTweet, setRandomTweet] = useState([])
