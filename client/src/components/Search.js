@@ -12,7 +12,7 @@ function Search () {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
-  const errorMSG = ['warning']
+  // const errorMSG = ['warning']
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -29,9 +29,28 @@ function Search () {
     const usernameUrl = `/api/tweets/username?username=${input}`
 
     // add warning if button clicked and input blank?
-    if (!input) {
-      // console.log('input blank') // works
+    // if (!input) {
+    //   <Alert variant='warning'>
+    //     Input field cannot be blank!
+    //   </Alert>
+    //   // console.log('input blank') // works
+    // }
+
+    if (!e.target.value) {
+      // console.log('blank') // works
+      // <Alert variant='warning' style={{ display: 'block' }} />
+      <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
+
+      // errorMSG.map((variant, idx) => (
+      //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
+      //     Input field cannot be blank!
+      //   </Alert>
+      // ))
     }
+
+    // const errorMSG = (e) => {
+    //   return <Alert variant='warning' style={!e.target.value ? { display: 'block' } : { display: 'none' }} />
+    // }
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
@@ -81,11 +100,17 @@ function Search () {
         </Form>
       </div>
       <div className='error-container'>
-        {errorMSG.map((variant, idx) => (
-          <Alert key={idx} variant={variant} style={{ display: 'none' }}>
+        {/* {errorMSG.map((variant, idx) => (
+          <Alert key={idx} variant={variant} style={{ display: 'block' }}>
             Input field cannot be blank!
           </Alert>
-        ))}
+        ))} */}
+        {/* {errorMSG.map((variant, idx) => (
+          <Alert key={idx} variant={variant} style={!handleSearch || !input ? { display: 'block' } : { display: 'none' }}>
+            Input field cannot be blank!
+          </Alert>
+        ))} */}
+        <Alert variant='warning' style={{ display: 'none' }}>Input cannot be blank!</Alert>
       </div>
       <div className='content-card'>
         <div className='wrapper'>
