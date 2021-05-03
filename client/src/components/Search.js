@@ -36,17 +36,19 @@ function Search () {
     //   // console.log('input blank') // works
     // }
 
-    if (!e.target.value) {
-      // console.log('blank') // works
-      // <Alert variant='warning' style={{ display: 'block' }} />
-      <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
+    // formValidation(e)
 
-      // errorMSG.map((variant, idx) => (
-      //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
-      //     Input field cannot be blank!
-      //   </Alert>
-      // ))
-    }
+    // if (!e.target.value) {
+    //   // console.log('blank') // works
+    //   // <Alert variant='warning' style={{ display: 'block' }} />
+    //   <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
+
+    // errorMSG.map((variant, idx) => (
+    //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
+    //     Input field cannot be blank!
+    //   </Alert>
+    // ))
+    // }
 
     // const errorMSG = (e) => {
     //   return <Alert variant='warning' style={!e.target.value ? { display: 'block' } : { display: 'none' }} />
@@ -59,6 +61,20 @@ function Search () {
 
     setInput('')
   }
+
+  // const formValidation = (e) => {
+  //   if (!e.target.value) {
+  //     console.log('blank') // works
+  //     // <Alert variant='warning' style={{ display: 'block' }} />
+  //     // <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
+
+  //   // errorMSG.map((variant, idx) => (
+  //   //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
+  //   //     Input field cannot be blank!
+  //   //   </Alert>
+  //   // ))
+  //   }
+  // }
 
   const tweetCards = tweets.map(tweet => {
     return <TweetCard key={tweet.id} tweet={tweet} />
@@ -110,7 +126,7 @@ function Search () {
             Input field cannot be blank!
           </Alert>
         ))} */}
-        <Alert variant='warning' style={{ display: 'none' }}>Input cannot be blank!</Alert>
+        <Alert variant='warning' style={handleSearch && !input ? { display: 'block' } : { display: 'none' }}>Input cannot be blank!</Alert>
       </div>
       <div className='content-card'>
         <div className='wrapper'>
