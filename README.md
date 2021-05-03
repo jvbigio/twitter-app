@@ -8,7 +8,8 @@ See it [here]coming soon...
 
 Homepage:
 
-![twitter-home](https://user-images.githubusercontent.com/43301741/116852409-4a17a200-abc2-11eb-9b4b-dc3313dfeef0.png)
+![twitter-homepage](https://user-images.githubusercontent.com/43301741/116855120-d3c96e80-abc6-11eb-9ac9-9939892df51d.png)
+
 
 Search Twitter via content or username:
 
