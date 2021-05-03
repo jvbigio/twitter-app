@@ -9,6 +9,7 @@ function Search () {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
+  const [loading, setLoading] = useState(false)
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -20,6 +21,7 @@ function Search () {
 
   const handleSearch = async (e) => {
     e.preventDefault()
+    setLoading(true)
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
@@ -30,10 +32,11 @@ function Search () {
       .catch(err => console.error(err))
 
     setInput('')
+    setLoading(false)
   }
 
   const tweetCards = tweets.map(tweet => {
-    return <TweetCard key={tweet.id} tweet={tweet} />
+    return <TweetCard key={tweet.id} tweet={tweet} loading={loading} />
   })
 
   return (

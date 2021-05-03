@@ -9,8 +9,9 @@ import { BsDash } from 'react-icons/bs'
 import { FaRetweet, FaRegComment, FaRegHeart } from 'react-icons/fa'
 import Image from 'react-bootstrap/Image'
 import Moment from 'react-moment'
+import Spinner from 'react-bootstrap/Spinner'
 
-const TweetCard = ({ input, tweet }) => {
+const TweetCard = ({ input, tweet, loading }) => {
   const tweetMedia = tweet.entities.media
   const hasMedia = () => tweetMedia ? tweetMedia[0].media_url : null
 
@@ -18,6 +19,10 @@ const TweetCard = ({ input, tweet }) => {
     width: '100%',
     maxHeight: '382px',
     borderRadius: '5%'
+  }
+
+  if (loading) {
+    return <Spinner className='spinner' animation='border' />
   }
 
   return (
