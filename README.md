@@ -20,7 +20,13 @@ Click on a Twitter user profile to generate a random Tweet:
 
 # Summary
 
-coming soon...
+This application utilizes Twitter's API to fetch Tweets. Users can search for a Tweet by a specific topic or by a Twitter username. Additionally, by clicking on a Twitter profile on the Random page, users can generate a random Tweet from any of the five Twitter profiles.
+
+Twitter's API is handled via a Node server, with React handling the frontend.
+
+Building this app was loads of fun and had several challenges along the way! Some of these challenges included working with authentication, error handling, and manipulating Twitter's data.
+
+I look forward to adding more features, so stay tuned for more!
 
 # Author
 
