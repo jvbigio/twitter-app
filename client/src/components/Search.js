@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
-// import { Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap'
-import { FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap'
+import { Input, FormFeedback } from 'reactstrap'
 import TweetCard from './TweetCard'
 import './Search.css'
 import axios from 'axios'
@@ -11,7 +10,7 @@ function Search (props) {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
-  const [formValidation, setFormValidation] = useState(null)
+  const [formValidation, setFormValidation] = useState(true)
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -24,13 +23,9 @@ function Search (props) {
   const handleSearch = async (e) => {
     e.preventDefault()
 
-    // const isFormValid = !e.target.value ? 'invalid' : null
     if (!e.target.value) {
-      console.log('blank')
-      setFormValidation('invalid')
+      setFormValidation(false)
     }
-
-    // classes += !e.target.value ? classes : null
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
@@ -46,9 +41,6 @@ function Search (props) {
   const tweetCards = tweets.map(tweet => {
     return <TweetCard key={tweet.id} tweet={tweet} />
   })
-
-  // const isFormValid = !e.target.value ? 'invalid' : null
-  // let classes = 'alert alert-warning'
 
   return (
     <div className='container'>
@@ -76,13 +68,14 @@ function Search (props) {
           </div>
           <Form.Group controlId='search'>
             <Input
-              formValidation
+              className={!formValidation ? 'is-invalid' : ''}
               type='text'
-              placeholder='Search Twitter'
+              placeholder={formValidation ? 'Search Twitter' : 'Input cannot be blank!'}
               value={input}
               onChange={(e) => getUserInput(e)}
             />
-            <FormFeedback>Input field cannot be blank!</FormFeedback>
+            {/* Messes up CSS form positioning: */}
+            {/* <FormFeedback>Input field cannot be blank!</FormFeedback> */}
           </Form.Group>
           <Button id='search-btn' variant='primary' type='submit'>Search</Button>
         </Form>
