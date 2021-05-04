@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
+// import { Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap'
+import { FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap'
 import TweetCard from './TweetCard'
 import './Search.css'
 import axios from 'axios'
 
-function Search () {
+function Search (props) {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
+  const [formValidation, setFormValidation] = useState(null)
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -20,6 +23,14 @@ function Search () {
 
   const handleSearch = async (e) => {
     e.preventDefault()
+
+    // const isFormValid = !e.target.value ? 'invalid' : null
+    if (!e.target.value) {
+      console.log('blank')
+      setFormValidation('invalid')
+    }
+
+    // classes += !e.target.value ? classes : null
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
@@ -35,6 +46,9 @@ function Search () {
   const tweetCards = tweets.map(tweet => {
     return <TweetCard key={tweet.id} tweet={tweet} />
   })
+
+  // const isFormValid = !e.target.value ? 'invalid' : null
+  // let classes = 'alert alert-warning'
 
   return (
     <div className='container'>
@@ -61,16 +75,19 @@ function Search () {
             />
           </div>
           <Form.Group controlId='search'>
-            <Form.Control
+            <Input
+              formValidation
               type='text'
               placeholder='Search Twitter'
               value={input}
               onChange={(e) => getUserInput(e)}
             />
+            <FormFeedback>Input field cannot be blank!</FormFeedback>
           </Form.Group>
           <Button id='search-btn' variant='primary' type='submit'>Search</Button>
         </Form>
       </div>
+      {/* <div className='error-container' /> */}
       <div className='content-card'>
         <div className='wrapper'>
           {tweetCards}
