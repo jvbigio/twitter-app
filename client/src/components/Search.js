@@ -23,11 +23,7 @@ function Search (props) {
   const handleSearch = async (e) => {
     e.preventDefault()
 
-    if (!e.target.value) {
-      setFormValidation(false)
-    } else {
-      setFormValidation(true)
-    }
+    !e.target.value ? setFormValidation(false) : setFormValidation(true)
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
