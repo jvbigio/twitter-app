@@ -25,6 +25,8 @@ function Search (props) {
 
     if (!e.target.value) {
       setFormValidation(false)
+    } else {
+      setFormValidation(true)
     }
 
     const contentUrl = `/api/tweets/content?search_term=${input}`

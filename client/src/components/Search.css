@@ -40,11 +40,6 @@
   border: none !important;
 }
 
-/* Test */
-/* .invalid-feedback {
-  display: inline-flex;
-} */
-
 button:focus,
 button:active {
   outline: none !important;
