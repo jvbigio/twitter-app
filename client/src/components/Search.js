@@ -12,7 +12,6 @@ function Search () {
   const [input, setInput] = useState('')
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
-  // const errorMSG = ['warning']
   const [formValidation, setFormValidation] = useState(true)
 
   const handleRadioBtn = (e) => {
@@ -27,44 +26,9 @@ function Search () {
     e.preventDefault()
 
     !e.target.value ? setFormValidation(false) : setFormValidation(true)
-    // let id = 'error-inactive'
-
-    // if (!e.target.value) {
-    //   id += 'error-active'
-    //   setFormValidation(false)
-    // } else {
-    //   id += 'error-inactive'
-    //   setFormValidation(true)
-    // }
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
-
-    // add warning if button clicked and input blank?
-    // if (!input) {
-    //   <Alert variant='warning'>
-    //     Input field cannot be blank!
-    //   </Alert>
-    //   // console.log('input blank') // works
-    // }
-
-    // formValidation(e)
-
-    // if (!e.target.value) {
-    //   // console.log('blank') // works
-    //   // <Alert variant='warning' style={{ display: 'block' }} />
-    //   <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
-
-    // errorMSG.map((variant, idx) => (
-    //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
-    //     Input field cannot be blank!
-    //   </Alert>
-    // ))
-    // }
-
-    // const errorMSG = (e) => {
-    //   return <Alert variant='warning' style={!e.target.value ? { display: 'block' } : { display: 'none' }} />
-    // }
 
     axios
       .get(radioButton.selected === 'content' ? contentUrl : usernameUrl)
@@ -73,20 +37,6 @@ function Search () {
 
     setInput('')
   }
-
-  // const formValidation = (e) => {
-  //   if (!e.target.value) {
-  //     console.log('blank') // works
-  //     // <Alert variant='warning' style={{ display: 'block' }} />
-  //     // <Alert variant='warning' style={{ display: 'block' }}>Input cannot be blank!</Alert>
-
-  //   // errorMSG.map((variant, idx) => (
-  //   //   <Alert key={idx} variant={variant} style={{ display: 'block' }}>
-  //   //     Input field cannot be blank!
-  //   //   </Alert>
-  //   // ))
-  //   }
-  // }
 
   const tweetCards = tweets.map(tweet => {
     return <TweetCard key={tweet.id} tweet={tweet} />
@@ -128,18 +78,6 @@ function Search () {
         </Form>
       </div>
       <div className='error-container'>
-        {/* {errorMSG.map((variant, idx) => (
-          <Alert key={idx} variant={variant} style={{ display: 'block' }}>
-            Input field cannot be blank!
-          </Alert>
-        ))} */}
-        {/* {errorMSG.map((variant, idx) => (
-          <Alert key={idx} variant={variant} style={!handleSearch || !input ? { display: 'block' } : { display: 'none' }}>
-            Input field cannot be blank!
-          </Alert>
-        ))} */}
-        {/* <Alert id='error-active' variant='warning'>Input cannot be blank!</Alert>
-        <Alert id='error-inactive' variant='warning'>Input cannot be blank!</Alert> */}
         <Alert className={formValidation ? 'error-inactive' : 'error-active'} variant='warning'>Input cannot be blank!</Alert>
       </div>
       <div className='content-card'>
