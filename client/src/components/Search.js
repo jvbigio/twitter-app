@@ -68,7 +68,7 @@ function Search () {
               onChange={(e) => getUserInput(e)}
             />
           </Form.Group>
-          <Button id='search-btn' variant='primary' type='submit'>Search</Button>
+          <Button disable={!input} id='search-btn' variant='primary' type='submit'>Search</Button>
         </Form>
       </div>
       <div className='content-card'>
