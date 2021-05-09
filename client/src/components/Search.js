@@ -13,6 +13,7 @@ function Search () {
   const [tweets, setTweets] = useState([])
   const [radioButton, setRadioButton] = useState({ selected: 'content' })
   // const errorMSG = ['warning']
+  const [formValidation, setFormValidation] = useState(true)
 
   const handleRadioBtn = (e) => {
     setRadioButton({ selected: e.target.value })
@@ -24,6 +25,17 @@ function Search () {
 
   const handleSearch = async (e) => {
     e.preventDefault()
+
+    !e.target.value ? setFormValidation(false) : setFormValidation(true)
+    // let id = 'error-inactive'
+
+    // if (!e.target.value) {
+    //   id += 'error-active'
+    //   setFormValidation(false)
+    // } else {
+    //   id += 'error-inactive'
+    //   setFormValidation(true)
+    // }
 
     const contentUrl = `/api/tweets/content?search_term=${input}`
     const usernameUrl = `/api/tweets/username?username=${input}`
@@ -126,7 +138,9 @@ function Search () {
             Input field cannot be blank!
           </Alert>
         ))} */}
-        <Alert variant='warning' style={handleSearch && !input ? { display: 'block' } : { display: 'none' }}>Input cannot be blank!</Alert>
+        {/* <Alert id='error-active' variant='warning'>Input cannot be blank!</Alert>
+        <Alert id='error-inactive' variant='warning'>Input cannot be blank!</Alert> */}
+        <Alert className={formValidation ? 'error-inactive' : 'error-active'} variant='warning'>Input cannot be blank!</Alert>
       </div>
       <div className='content-card'>
         <div className='wrapper'>
