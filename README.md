@@ -1,6 +1,6 @@
 # Twitter Clone
 
-A React application that fetches Tweets from Twitter's API.
+A responsive React application that fetches Tweets from Twitter's API.
 
 See it [here]coming soon...
 
