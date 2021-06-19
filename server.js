@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const axios = require('axios')
+const axios = require('axios').default
 require('dotenv').config()
 
 const tokenService = require('./controllers/token-service')
@@ -11,13 +11,10 @@ const port = process.env.PORT || 3000
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
 app.get('/api/tweets/content', async (req, res) => {
-  const token = await tokenService.getAccessToken()
+  await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/search/tweets.json'
 
   const config = {
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
     params: {
       q: req.query.search_term,
       lang: 'en',
@@ -35,13 +32,10 @@ app.get('/api/tweets/content', async (req, res) => {
 })
 
 app.get('/api/tweets/username', async (req, res) => {
-  const token = await tokenService.getAccessToken()
+  await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 
   const config = {
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
     params: {
       screen_name: req.query.username,
       count: 10,
@@ -59,13 +53,10 @@ app.get('/api/tweets/username', async (req, res) => {
 })
 
 app.get('/api/tweets/random', async (req, res) => {
-  const token = await tokenService.getAccessToken()
+  await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 
   const config = {
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
     params: {
       screen_name: req.query.username,
       count: 1,

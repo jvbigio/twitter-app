@@ -1,22 +1,31 @@
 const axios = require('axios')
-const qs = require('qs')
-
 require('dotenv').config()
 
-const getAccessToken = async () => {
+let bearer
+
+const getAccessToken = () => {
   try {
-    const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
+    if (bearer) return bearer
+    const URL = 'https://api.twitter.com/oauth2/token'
+
+    const config = {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: 'grant_type=client_credentials',
       auth: {
         username: process.env.API_KEY,
         password: process.env.API_SECRET_KEY
       }
-    })
-    const token = res.data.access_token
-    return token
+    }
+
+    return axios
+      .post(URL, 'grant_type=client_credentials', config)
+      .then(response => {
+        axios.defaults.headers.common = {
+          Authorization: `Bearer ${response.data.access_token}`
+        }
+        return response.data.access_token
+      })
   } catch (error) {
     console.error(error)
   }
