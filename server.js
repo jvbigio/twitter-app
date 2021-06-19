@@ -2,34 +2,16 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const axios = require('axios')
-const qs = require('qs')
 require('dotenv').config()
+
+const tokenService = require('./controllers/token-service')
 
 const port = process.env.PORT || 3000
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
-const getAccessToken = async () => {
-  try {
-    const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: 'grant_type=client_credentials',
-      auth: {
-        username: process.env.API_KEY,
-        password: process.env.API_SECRET_KEY
-      }
-    })
-    const token = res.data.access_token
-    return token
-  } catch (error) {
-    console.error(error)
-  }
-}
-
 app.get('/api/tweets/content', async (req, res) => {
-  const token = await getAccessToken()
+  const token = await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/search/tweets.json'
 
   const config = {
@@ -53,7 +35,7 @@ app.get('/api/tweets/content', async (req, res) => {
 })
 
 app.get('/api/tweets/username', async (req, res) => {
-  const token = await getAccessToken()
+  const token = await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 
   const config = {
@@ -77,7 +59,7 @@ app.get('/api/tweets/username', async (req, res) => {
 })
 
 app.get('/api/tweets/random', async (req, res) => {
-  const token = await getAccessToken()
+  const token = await tokenService.getAccessToken()
   const URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 
   const config = {
