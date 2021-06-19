@@ -26,7 +26,7 @@ Click on a Twitter user profile to generate a random Tweet:
 4) `touch .env` (this will create a .env file)
 5) follow the .env_sample file (include your API Key & API Secret Key)
 6) run `npm run dev`
-7) open a browser and navigate to localhost:3000
+7) open a browser and navigate to `localhost:3000`
 # Summary
 
 This application utilizes Twitter's API to fetch Tweets. Users can search for a Tweet by a specific topic or by a Twitter username. Additionally, by clicking on a Twitter profile on the Random page, users can generate a random Tweet from any of the five Twitter profiles.
