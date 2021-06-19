@@ -9,8 +9,6 @@ const port = process.env.PORT || 3000
 
 app.use('/', express.static(path.join(__dirname, 'client/build')))
 
-app.listen(port, () => console.log(`Server running on port ${port}`))
-
 const getAccessToken = async () => {
   try {
     const res = await axios.post('https://api.twitter.com/oauth2/token', qs.stringify({ grant_type: 'client_credentials' }), {
@@ -101,3 +99,9 @@ app.get('/api/tweets/random', async (req, res) => {
       res.sendStatus(500).send(error)
     })
 })
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client' 'build', 'index.html'))
+})
+
+app.listen(port, () => console.log(`Server running on port ${port}`))
